@@ -602,7 +602,8 @@ a {
 html{scroll-behavior:smooth}
 .ir-sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px;margin:58px 0 8px;scroll-margin-top:24px}
 .ir-sec-head h2{margin:0;color:#6E0147;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.2}
-.ir-sec-head p{margin:0;color:#6b6b6b;font-size:15px;max-width:62ch}
+/* description sits on its own line, left-aligned under the heading (not pushed to the right) */
+.ir-sec-head p{flex:1 0 100%;order:3;margin:8px 0 0;color:#6b6b6b;font-size:15px;line-height:1.55;max-width:70ch;text-align:left}
 .ir-more{flex:none;font-size:14px;font-weight:700;color:#6E0147;text-decoration:none!important;white-space:nowrap}
 .ir-more:hover{color:#a01a6e}
 .ir-page .ir-sec-head + .ir-cards,.ir-page .ir-sec-head + .ir-quote,.ir-page .ir-sec-head + .ir-mission,.ir-page .ir-sec-head + .ir-news,.ir-page .ir-sec-head + .ir-brandgrid,.ir-page .ir-sec-head + .ir-pillars,.ir-page .ir-sec-head + .ir-ceo{margin-top:18px}
@@ -799,7 +800,9 @@ html{scroll-behavior:smooth}
 .ir-vid .v-empty{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a0420,#6E0147)}
 .ir-vid .v-empty .v-play{display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.16);border:2px solid rgba(255,255,255,.5)}
 .ir-vid .v-empty .v-play svg{width:26px;height:26px;color:#fff;margin-left:3px}
-.ir-vid figcaption{margin:12px 0 0;color:#3a0420;font-size:15.5px;font-weight:700;line-height:1.35}
+.ir-vid figcaption{margin:11px 0 0}
+.ir-vid .v-title{display:block;color:#0f0f0f;font-size:15px;font-weight:600;line-height:1.34;letter-spacing:-.1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ir-vid .v-meta{display:block;margin-top:5px;color:#606060;font-size:12.5px;font-weight:500;line-height:1.3}
 .ir-vid{margin:0}
 @media(max-width:900px){.ir-videos{grid-template-columns:1fr}}
 
@@ -1048,7 +1051,7 @@ table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
     <div class="cob-body"><p>Direct-to-consumer sales of personalized cosmetics and skincare developed from genetic and skin-analysis data.</p><a class="cob-link" href="https://305care.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14L21 3"/><path d="M15 3h6v6"/><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/></svg><span>305care.com</span></a></div>
   </details><details class="ir-coblock">
     <summary><span class="cob-logo"><img src="/investor-relations/img/hln-logo.svg" alt="HLN Genetik GmbH logo" loading="lazy"/></span><span class="cob-tx"><span class="cob-name">HLN Genetik GmbH</span><span class="cob-role">Clinical laboratory</span></span><span class="cob-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
-    <div class="cob-body"><p>Clinical genetic laboratory services, extending the Group&rsquo;s diagnostic capacity into regulated medical testing.</p></div>
+    <div class="cob-body"><p>Clinical genetic laboratory services, extending the Group&rsquo;s diagnostic capacity into regulated medical testing.</p><a class="cob-link" href="https://hln-genetik.at/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14L21 3"/><path d="M15 3h6v6"/><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/></svg><span>hln-genetik.at</span></a></div>
   </details><details class="ir-coblock">
     <summary><span class="cob-logo"><img src="/investor-relations/img/mendelio-logo.png" alt="Mendelio GmbH logo" loading="lazy"/></span><span class="cob-tx"><span class="cob-name">Mendelio GmbH</span><span class="cob-role">Software development</span></span><span class="cob-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
     <div class="cob-body"><p>Builds the software, bioinformatics and AI platforms that interpret genetic data and power the Group&rsquo;s reports, customer apps and laboratory automation.</p><a class="cob-link" href="https://mendelio.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14L21 3"/><path d="M15 3h6v6"/><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/></svg><span>mendelio.com</span></a></div>
@@ -1217,8 +1220,7 @@ table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
       </div>
       <div class="tr-video"><video src="/investor-relations/vid/lab.mp4" poster="/investor-relations/vid/lab-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia lab video"></video></div>
       <div class="tr-body">
-        <p>Our accredited, high-throughput genetic and blood laboratory in Salzburg decodes the human genome and metabolome at scale. From a single sample we run DNA analysis and biochemical, virological and diagnostic testing under ISO-accredited quality systems &mdash; the analytical foundation for every personalized product and therapy in the Group. Below, the full spectrum of analyses, from lifestyle DNA tests to high-end clinical applications.</p>
-        <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/genetic-laboratory/">Learn more &rarr;</a></div>
+        <p>Our accredited, high-throughput genetic and blood laboratory in Salzburg decodes the human genome and metabolome at scale. From a single sample we run DNA analysis alongside biochemical, virological and diagnostic testing under accredited quality systems &mdash; the analytical foundation for every personalized product and therapy in the Group.</p><p>The same facility scaled to become one of the leading SARS-CoV-2 PCR testing laboratories during the COVID-19 pandemic, proving the throughput and reliability of our platform under extreme demand. At the top of our range, Novogenia is the only laboratory in Austria licensed to perform genetic analysis on embryos (preimplantation genetic testing) &mdash; a uniquely regulated, high-end capability. Below, the full spectrum of analyses, from lifestyle DNA tests to high-end clinical applications.</p>
         
 <section class="ir-spectrum">
   <div class="sp-head">
@@ -1269,8 +1271,7 @@ table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
       </div>
       <div class="tr-video"><video src="/investor-relations/vid/supplements.mp4" poster="/investor-relations/vid/supplements-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia supplements video"></video></div>
       <div class="tr-body">
-        <p>Each supplement is formulated individually from the customer&rsquo;s own genetic and lab-analysis data and produced in house &mdash; the right nutrients, in the right dose, matched to that person&rsquo;s biology. This closes the loop from analysis to a finished, personalized product manufactured under our own roof.</p>
-        <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/personalized-supplementation/">Learn more &rarr;</a></div>
+        <p>Each supplement is formulated individually from the customer&rsquo;s own genetic and lab-analysis data and produced in house &mdash; the right nutrients, in the right dose, matched to that person&rsquo;s biology. Rather than selling one-size-fits-all pills, we calculate each person&rsquo;s requirement for vitamins, minerals, amino acids and other micronutrients from their genetic profile and lifestyle, then manufacture a tailored daily formulation.</p><p>Production runs end to end under our own roof &mdash; from formulation and dosing to mixing, filling and packaging &mdash; so quality and personalization are controlled at every step. This closes the loop from analysis to a finished, personalized product, delivered as a convenient daily routine and reformulated whenever new analysis data becomes available.</p>
         
       </div>
     </section><section class="ir-techrow ir-techrow--video">
@@ -1280,8 +1281,7 @@ table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
       </div>
       <div class="tr-video"><video src="/investor-relations/vid/cosmetics.mp4" poster="/investor-relations/vid/cosmetics-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia cosmetics video"></video></div>
       <div class="tr-body">
-        <p>Skincare is personalized from genetic and skin-analysis data and manufactured in house, so each formulation targets the individual&rsquo;s specific skin biology rather than a one-size-fits-all product &mdash; another fully integrated, in-house value chain.</p>
-        <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/personalized-cosmetics/">Learn more &rarr;</a></div>
+        <p>Skincare is personalized from genetic and skin-analysis data and manufactured in house, so each formulation targets the individual&rsquo;s specific skin biology rather than a one-size-fits-all product. Genetic markers for factors such as collagen breakdown, oxidative stress, moisture retention and skin sensitivity guide which active ingredients &mdash; and which concentrations &mdash; are blended into each customer&rsquo;s product.</p><p>Like our supplements, the cosmetics are produced on our own manufacturing lines, giving the Group another fully integrated, in-house value chain from analysis to finished, individualized formulation.</p>
         
       </div>
     </section><details class="ir-techrow">
@@ -1292,14 +1292,13 @@ table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
   </summary>
   <div class="tr-body">
     <p>Our AI engines interpret genetic data against millions of scientific publications, identifying the traits and relationships that turn raw lab data into actionable insight. The same models continuously improve our reports, detect inefficiencies in therapies, and power the &ldquo;analyse &rarr; product &rarr; re-analyse&rdquo; feedback loop at the heart of the Group.</p>
-    <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/artificial-intelligence/">Learn more &rarr;</a></div>
     
   </div>
 </details></div>
 
   
 <div class="ir-sec-head"><h2>Media</h2><p>Films from the Novogenia Academy &mdash; the science behind our analyses and products.</p></div>
-<div class="ir-videos"><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/rDQBNTWt82Y" title="Understanding your body&amp;rsquo;s instructions" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>Understanding your body&rsquo;s instructions</figcaption></figure><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/pRU2p2Banno" title="How genes influence which foods are healthy or unhealthy for you" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>How genes influence which foods are healthy or unhealthy for you</figcaption></figure><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/p02EmbTNRqE" title="How genes influence your body weight" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>How genes influence your body weight</figcaption></figure><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/IgNeWJ6tTng" title="Genes and maintaining youthful skin" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>Genes and maintaining youthful skin</figcaption></figure></div>
+<div class="ir-videos"><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/rDQBNTWt82Y" title="Understanding your body&amp;rsquo;s instructions" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption><span class="v-title">Understanding your body&rsquo;s instructions</span><span class="v-meta">Novogenia Academy</span></figcaption></figure><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/pRU2p2Banno" title="How genes influence which foods are healthy or unhealthy for you" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption><span class="v-title">How genes influence which foods are healthy or unhealthy for you</span><span class="v-meta">Novogenia Academy</span></figcaption></figure><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/p02EmbTNRqE" title="How genes influence your body weight" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption><span class="v-title">How genes influence your body weight</span><span class="v-meta">Novogenia Academy</span></figcaption></figure><figure class="ir-vid"><div class="v-frame"><iframe src="https://www.youtube-nocookie.com/embed/IgNeWJ6tTng" title="Genes and maintaining youthful skin" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption><span class="v-title">Genes and maintaining youthful skin</span><span class="v-meta">Novogenia Academy</span></figcaption></figure></div>
 
   <div class="ir-sec-head"><h2>The Novogenia Stock</h2><a class="ir-more" href="/investor-relations/stocks/">Share details &rarr;</a></div>
   <p class="ir-lead" style="margin-bottom:6px">Live price development on XETRA / Munich, with the key facts of the Novogenia AG share.</p>
@@ -1365,9 +1364,6 @@ table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
   </article><article class="bf-row bf-row--rev">
     <div class="bf-media"><img src="/investor-relations/img/brand-novodaily-mood.jpg" alt="NovoDaily" loading="lazy"/></div>
     <div class="bf-tx"><span class="bf-logo"><img src="/investor-relations/img/brand-novodaily.png" alt="NovoDaily logo" loading="lazy"/></span><span class="bf-tag">Personalized daily supplements</span><h3>NovoDaily</h3><p>A personalized daily-supplement subscription: each sachet is formulated from the customer&rsquo;s own genetic and lifestyle data and produced in-house &mdash; the right nutrients, in the right dose, every day.</p><div class="ir-btnrow"><a class="ir-btn ghost" href="https://novodaily.com" target="_blank" rel="noopener">Discover NovoDaily &rarr;</a></div></div>
-  </article><article class="bf-row">
-    <div class="bf-media"><img src="/investor-relations/img/brand-dnanutricontrol.jpg" alt="DNAnutriControl" loading="lazy"/></div>
-    <div class="bf-tx"><span class="bf-logo bf-logo--mono">D</span><span class="bf-tag">DNA-based nutrition analysis</span><h3>DNAnutriControl</h3><p>A comprehensive DNA nutrition analysis revealing how your genes influence metabolism, nutrient needs and weight response &mdash; the scientific basis for a genuinely personalized nutrition plan.</p></div>
   </article></div>
 
   <div class="ir-sec-head" id="newsroom"><h2>Newsroom</h2><a class="ir-more" href="/investor-relations/newsroom/">All news &rarr;</a></div>
