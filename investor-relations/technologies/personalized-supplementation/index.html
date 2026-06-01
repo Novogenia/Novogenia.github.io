@@ -918,6 +918,13 @@ table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
 .tr-body{padding:4px 24px 24px}
 .tr-body>p{margin:0 0 16px;font-size:15px;line-height:1.7;color:#454545}
 @media(max-width:640px){.ir-techrow>summary{padding:16px 16px;gap:14px}.tr-ico{flex-basis:48px;width:48px;height:48px}.tr-title{font-size:18px}.tr-body{padding:4px 16px 18px}}
+/* technology rows presented as one always-on element with embedded video */
+.ir-techrow--video{display:block}
+.ir-techrow--video .tr-head{display:flex;align-items:center;gap:18px;padding:20px 24px}
+.ir-techrow--video .tr-video{position:relative;width:100%;background:#0c0610;aspect-ratio:16/9;overflow:hidden}
+.ir-techrow--video .tr-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ir-techrow--video .tr-body{padding:22px 24px 24px}
+@media(max-width:640px){.ir-techrow--video .tr-head{padding:16px 16px;gap:14px}.ir-techrow--video .tr-body{padding:16px 16px 18px}}
 
 /* new building expansion */
 .ir-build{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#fff;border:1px solid #ece6ea;border-radius:18px;overflow:hidden;margin:22px 0 6px;box-shadow:0 8px 26px rgba(45,8,28,.07)}
