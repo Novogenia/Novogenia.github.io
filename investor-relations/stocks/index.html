@@ -518,7 +518,7 @@ a {
 /* ---- hexagon hero ---- */
 .ir-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;margin:6px 0 34px}
 .ir-hero-copy .ir-eyebrow{margin-bottom:12px}
-.ir-brandname{margin:0 0 6px;font-size:78px!important;font-weight:800;line-height:.95;letter-spacing:-1px;background:linear-gradient(135deg,#6E0147,#a01a6e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ir-brandname{margin:0 0 2px;font-size:54px!important;font-weight:800;line-height:.98;letter-spacing:-1px;background:linear-gradient(135deg,#6E0147,#a01a6e);-webkit-background-clip:text;background-clip:text;color:transparent}
 .ir-brandsub{margin:0 0 16px;font-size:18px!important;font-weight:600;color:#6b5b64;line-height:1.4}
 .ir-kw{margin:0 0 18px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 4px;text-transform:uppercase;letter-spacing:1.4px;font-size:11px;font-weight:700;color:#9a9098}
 .ir-kw .kw{color:#9a9098}
@@ -534,10 +534,10 @@ a {
 .ir-herofig .herofig-badge{position:absolute;left:16px;bottom:16px;background:rgba(110,1,71,.92);color:#fff;font-size:12px;font-weight:700;letter-spacing:.3px;padding:8px 14px;border-radius:30px;backdrop-filter:blur(2px)}
 .ir-herofig .herofig-fallback{display:block;width:100%;height:100%}
 /* in-page tab navigation */
-.ir-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 34px;padding:8px;background:linear-gradient(135deg,#6E0147,#a01a6e);border-radius:16px;box-shadow:0 14px 36px rgba(110,1,71,.20)}
-.ir-tab{flex:1 1 auto;text-align:center;white-space:nowrap;padding:13px 20px;border-radius:11px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#fff;text-decoration:none;transition:.16s}
-.ir-tab:hover{background:rgba(255,255,255,.16)}
-.ir-tab:active{transform:translateY(1px)}
+.ir-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px;padding:0}
+.ir-tab{flex:1 1 auto;text-align:center;white-space:nowrap;padding:13px 22px;border-radius:12px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#6E0147;text-decoration:none;background:#fff;border:1.5px solid #e7cfe0;box-shadow:0 3px 10px rgba(110,1,71,.07);transition:transform .14s,box-shadow .16s,background .16s,color .16s,border-color .16s}
+.ir-tab:hover{background:linear-gradient(135deg,#6E0147,#a01a6e);border-color:transparent;color:#fff;box-shadow:0 10px 24px rgba(110,1,71,.28);transform:translateY(-2px)}
+.ir-tab:active{transform:translateY(0)}
 @media(max-width:760px){.ir-tab{flex:1 1 100%}}
 /* ---- share-price quote widget ---- */
 .ir-quote{background:#fff;border:1px solid #ece6ea;border-radius:18px;padding:22px 26px 18px;box-shadow:0 8px 30px rgba(45,8,28,.07);margin:0 0 34px}
@@ -593,7 +593,7 @@ a {
 .ir-figure img{display:block;width:100%;height:auto}
 .ir-figure figcaption{font-size:13px;color:#969696;padding:12px 18px;background:#faf8f9}
 .ir-disc{font-size:12px;color:#b0a3a9;font-style:italic;margin:18px 0 0}
-@media(max-width:760px){.ir-hero{grid-template-columns:1fr}.ir-hexwrap{max-width:300px;margin-top:6px}.ir-hero--building .ir-herofig{margin-top:6px;min-height:300px}.ir-brandname{font-size:50px}.ir-quote .q-price{text-align:left}}
+@media(max-width:760px){.ir-hero{grid-template-columns:1fr}.ir-hexwrap{max-width:300px;margin-top:6px}.ir-hero--building .ir-herofig{margin-top:6px;min-height:300px}.ir-brandname{font-size:38px!important}.ir-quote .q-price{text-align:left}}
 .ir-back{margin-top:38px}
 .ir-back a{color:#6E0147;font-weight:700;text-decoration:none}
 @media(max-width:900px){.ir-stats{grid-template-columns:repeat(2,1fr)}}
@@ -635,39 +635,65 @@ html{scroll-behavior:smooth}
 .ir-cta .ir-btn.solid{background:#fff;color:#6E0147;border-color:#fff}
 .ir-cta .ir-btn.solid:hover{background:#E5E50F;border-color:#E5E50F;color:#3a0420}
 
-/* merged business segments + companies (3 solid-colored columns; light company boxes) */
-.ir-segblocks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start;margin:18px 0 6px}
-.ir-segblock{display:flex;flex-direction:column;border-radius:20px;padding:24px 22px 24px;box-shadow:0 14px 34px rgba(45,8,28,.16);background:linear-gradient(160deg,#6E0147,#4a0430);color:#fff}
+/* merged business segments + companies (vertical full-width blocks; companies left, chart right) */
+.ir-segblocks{display:flex;flex-direction:column;gap:26px;margin:18px 0 6px}
+.ir-segblock{position:relative;border-radius:22px;padding:28px 30px 30px;box-shadow:0 16px 40px rgba(45,8,28,.18);background:linear-gradient(160deg,#6E0147,#4a0430);color:#fff}
 .ir-segblock--olive{background:linear-gradient(160deg,#8a8a17,#5f5f0c)}
 .ir-segblock--gray{background:linear-gradient(160deg,#7c7c7c,#565656)}
-.segb-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.segb-ico{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);flex:0 0 50px}
-.segb-ico svg{width:26px;height:26px;color:#fff}
-.segb-titles{display:flex;flex-direction:column;gap:9px;align-items:flex-start;min-width:0}
-.segb-title{margin:0;color:#fff;font-size:18px;font-weight:800;letter-spacing:.3px;line-height:1.2}
-.segb-badge{align-self:flex-start;background:rgba(255,255,255,.94);color:#3a0420;font-size:11.5px;font-weight:800;padding:5px 11px;border-radius:8px}
-.ir-segblock--olive .segb-badge{color:#46460a}.ir-segblock--gray .segb-badge{color:#3a3a3a}
-.segb-intro{margin:14px 0 16px;font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.9)}
-.segb-cos{display:grid;grid-template-columns:1fr;gap:10px}
-.ir-coblock{background:#fff;border:1px solid rgba(255,255,255,.55);border-radius:13px;overflow:hidden;transition:box-shadow .15s}
+.segb-head{display:flex;align-items:center;gap:16px;padding-right:170px}
+.segb-ico{display:flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:15px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);flex:0 0 54px}
+.segb-ico svg{width:28px;height:28px;color:#fff}
+.segb-title{flex:1;margin:0;color:#fff!important;font-size:clamp(22px,2.5vw,29px)!important;font-weight:800;letter-spacing:.3px;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,.28)}
+.segb-badge{position:absolute;top:24px;right:26px;display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#C9960C,#e7b62b);color:#3a2400;font-size:12.5px;font-weight:800;letter-spacing:.3px;padding:8px 15px;border-radius:30px;box-shadow:0 8px 20px rgba(0,0,0,.3);white-space:nowrap}
+.segb-intro{margin:16px 0 22px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.92);max-width:90ch}
+.segb-body{display:grid;grid-template-columns:1fr 1.05fr;gap:24px;align-items:start}
+.segb-cos{display:flex;flex-direction:column;gap:11px}
+.segb-chart{display:flex;flex-direction:column;justify-content:center;min-width:0;background:rgba(255,255,255,.96);border-radius:16px;padding:18px 20px;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.ir-coblock{background:#fff;border:1px solid rgba(255,255,255,.55);border-radius:14px;overflow:hidden;transition:box-shadow .15s}
 .ir-coblock[open]{box-shadow:0 10px 26px rgba(0,0,0,.22)}
-.ir-coblock summary{display:flex;align-items:center;gap:12px;padding:13px 14px;cursor:pointer;list-style:none}
+.ir-coblock summary{display:flex;align-items:center;gap:14px;padding:15px 16px;cursor:pointer;list-style:none}
 .ir-coblock summary::-webkit-details-marker{display:none}
-.cob-logo{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:10px;background:#fff;border:1px solid #efe7ec;flex:0 0 46px;overflow:hidden}
+.cob-logo{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:12px;background:#fff;border:1px solid #efe7ec;flex:0 0 64px;overflow:hidden;padding:6px}
 .cob-logo img{max-width:100%;max-height:100%;object-fit:contain}
-.cob-mono{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,#6E0147,#a01a6e);color:#fff;font-weight:700;font-size:17px}
+.cob-mono{display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:9px;background:linear-gradient(135deg,#6E0147,#a01a6e);color:#fff;font-weight:700;font-size:21px}
 .cob-tx{display:flex;flex-direction:column;flex:1;min-width:0}
-.cob-name{color:#2a0418;font-size:15.5px;font-weight:800;line-height:1.2}
+.cob-name{color:#2a0418;font-size:16px;font-weight:800;line-height:1.2}
 .cob-role{margin-top:3px;color:#6E0147;font-size:13px;font-weight:600}
 .cob-chev{flex:none;color:#b58aa4;transition:transform .2s}
 .cob-chev svg{width:20px;height:20px}
 .ir-coblock[open] .cob-chev{transform:rotate(180deg)}
-.cob-body{padding:0 14px 14px}
+.cob-body{padding:0 16px 16px}
 .cob-body p{margin:0 0 12px;font-size:13.5px;line-height:1.55;color:#4a4a4a}
 .cob-link{display:inline-block;color:#fff;background:#6E0147;font-size:13px;font-weight:700;padding:8px 16px;border-radius:30px;text-decoration:none}
 .cob-link:hover{background:#a01a6e}
-@media(max-width:980px){.ir-segblocks{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.ir-segblocks{grid-template-columns:1fr}}
+/* segment chart slot (diagnostics Chart.js) */
+.segchart{display:flex;flex-direction:column}
+.segchart-title{color:#6E0147;font-size:15px;font-weight:800;letter-spacing:.2px;margin-bottom:10px;text-align:center}
+.segchart-canvas{position:relative;height:300px;width:100%}
+.segchart-legend{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin-top:12px}
+.scl{position:relative;padding-left:18px;font-size:11.5px;font-weight:600;color:#5a5a5a}
+.scl::before{content:"";position:absolute;left:0;top:2px;width:12px;height:12px;border-radius:3px}
+.scl-core::before{background:#5E0047}
+.scl-covid::before{background:rgba(79,195,247,.65)}
+.segchart-note{margin:12px 0 0;font-size:11px;line-height:1.5;color:#8a8a8a;font-style:italic}
+/* segment chart slot (drug import facts) */
+.segfacts{display:flex;flex-direction:column;gap:14px}
+.segfacts-h{color:#5f5f0c;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.segfact{display:flex;flex-direction:column;gap:3px;padding-left:16px;border-left:3px solid #8a8a17}
+.sf-t{color:#3a3a14;font-size:14.5px;font-weight:800}
+.sf-d{color:#5a5a4a;font-size:13px;line-height:1.5}
+/* segment chart slot (minority investments total) */
+.seginvest{display:flex;flex-direction:column;gap:16px}
+.seginvest-total{display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px 0 16px;border-bottom:2px solid #ececec}
+.iv-num{font-size:42px;font-weight:800;line-height:1;color:#565656;letter-spacing:-.5px}
+.iv-lab{margin-top:7px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#8a8a8a}
+.iv-list{display:flex;flex-direction:column;gap:9px}
+.iv-row{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:10px}
+.iv-n{font-size:13px;font-weight:700;color:#3a3a3a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iv-bar{height:11px;border-radius:6px;background:#ececec;overflow:hidden}
+.iv-fill{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#7c7c7c,#565656)}
+.iv-v{font-size:13px;font-weight:800;color:#565656;white-space:nowrap}
+@media(max-width:760px){.segb-head{padding-right:0;flex-wrap:wrap}.segb-badge{position:static;margin-top:4px;order:3;flex-basis:100%}.segb-body{grid-template-columns:1fr}.segchart-canvas{height:260px}}
 
 /* top highlights band */
 .ir-highlights{background:linear-gradient(135deg,#6E0147,#a01a6e);background-size:cover;background-position:center;border-radius:18px;padding:28px 30px;margin:0 0 30px}
@@ -676,16 +702,17 @@ html{scroll-behavior:smooth}
 .hl-feature-ico svg{width:30px;height:30px;color:#fff}
 .hl-feature-num{font-size:48px;font-weight:800;line-height:1;color:#fff;letter-spacing:-.5px}
 .hl-feature-lab{margin-top:8px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#f0d9aa}
-.hl-top{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px 40px;align-items:center;padding:4px 0 26px;margin:0 0 24px;border-bottom:1px solid rgba(255,255,255,.22)}
-.hl-top .hl-feature{padding:0;margin:0;align-items:flex-start;text-align:left;border-bottom:none}
-.hl-top .hl-feature-num{font-size:44px}
+.hl-top{display:grid;grid-template-columns:1fr 1fr;gap:24px 40px;align-items:center;padding:4px 0 26px;margin:0 0 24px;border-bottom:1px solid rgba(255,255,255,.22)}
+.hl-top .hl-feature{padding:0;margin:0;align-items:center;text-align:center;justify-content:center;border-bottom:none}
+.hl-top .hl-feature-num{font-size:52px}
 .hl-rev{min-width:0}
-.hlrev-cap{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:#f0d9aa;margin-bottom:14px}
-.hlrev-row{display:flex;align-items:flex-end;gap:14px;height:150px}
+.hlrev-cap{display:block;text-align:center;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:#f0d9aa;margin-bottom:14px}
+.hlrev-row{display:flex;align-items:flex-end;gap:14px;height:150px;border-bottom:2px solid rgba(255,255,255,.55)}
 .hlrev-col{flex:1 1 0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
 .hlrev-val{font-size:13px;font-weight:800;color:#fff;margin-bottom:6px;white-space:nowrap}
 .hlrev-bar{width:100%;max-width:56px;border-radius:7px 7px 0 0;background:linear-gradient(180deg,#f3d486,#C9960C);box-shadow:0 6px 16px rgba(0,0,0,.22);transition:height .5s ease}
-.hlrev-yr{margin-top:8px;font-size:12px;font-weight:700;color:#f3e3ee}
+.hlrev-years{display:flex;gap:14px;margin-top:8px}
+.hlrev-yr{flex:1 1 0;text-align:center;font-size:12px;font-weight:700;color:#f3e3ee}
 .hlrev-grow{flex:0 0 auto;align-self:center;transform:translateY(-10px)}
 .hlrev-pct{background:#fff;color:#1f9d55;font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap;box-shadow:0 5px 12px rgba(0,0,0,.18)}
 @media(max-width:760px){.hl-top{grid-template-columns:1fr;text-align:center}.hl-top .hl-feature{align-items:center;text-align:center}}
@@ -701,6 +728,12 @@ html{scroll-behavior:smooth}
 
 /* laboratory analysis spectrum (visual) */
 .ir-spectrum{position:relative;margin:22px 0 6px;padding:8px 0 4px}
+.sp-head{margin:0 0 22px}
+.sp-title{margin:0 0 12px;color:#6E0147;font-size:clamp(18px,2.1vw,23px);font-weight:800;line-height:1.3}
+.sp-note{display:flex;align-items:flex-start;gap:10px;margin:0;padding:12px 16px;background:#fbf3f8;border:1px solid #e7cfe0;border-left:4px solid #6E0147;border-radius:10px;font-size:14px;line-height:1.55;color:#4a4a4a}
+.sp-note svg{flex:0 0 20px;width:20px;height:20px;color:#6E0147;margin-top:1px}
+.sp-note strong{color:#6E0147}
+.sp-plot{position:relative}
 .sp-track{position:absolute;left:6%;right:6%;top:118px;height:6px;border-radius:6px;background:linear-gradient(90deg,#6E0147,#a01a6e 28%,#C9960C 60%,#1b6fb3);z-index:0;box-shadow:0 4px 14px rgba(110,1,71,.25)}
 .sp-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .sp-card{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid #efe7ec;border-radius:16px;padding:0 16px 22px;overflow:hidden;box-shadow:0 8px 26px rgba(45,8,28,.10);transition:transform .18s,box-shadow .18s}
@@ -861,16 +894,12 @@ table.cmp thead th{background:#3a0420;color:#fff;font-weight:700;font-size:12.5p
 table.cmp tbody tr.cmp-novo td{background:#fbf3f8;font-weight:700}
 table.cmp tbody tr.cmp-novo .c-co{color:#6E0147}
 .c-co{font-weight:700;color:#2d081c}
-.cmp-tone{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;line-height:1.4}
-.cmp-tone.g{background:#e3f4ea;color:#1f7a45}
-.cmp-tone.a{background:#fbf0d8;color:#9a6a08}
-.cmp-tone.n{background:#f0eef0;color:#9a9a9a}
-details.cmp-more{margin-top:0}
-details.cmp-more summary{list-style:none;cursor:pointer;padding:12px 16px;font-weight:700;color:#6E0147;text-align:center;font-size:14px}
-details.cmp-more summary::-webkit-details-marker{display:none}
-details.cmp-more summary::after{content:" ▾";color:#a01a6e}
-details.cmp-more[open] summary::after{content:" ▴"}
-.cmp-note{font-size:12px;color:#969696;margin:8px 2px 0}
+.cmp-tone{display:inline-block;padding:3px 11px;border-radius:999px;font-size:12px;font-weight:800;line-height:1.4}
+.cmp-tone.g{background:#1f9d55;color:#fff}
+.cmp-tone.a{background:#e8a317;color:#3a2400}
+.cmp-tone.n{background:#dcdada;color:#6e6e6e}
+.cmp-note{font-size:12.5px;color:#7a7a7a;margin:12px 2px 0;line-height:1.5}
+.cmp-disc{font-size:11.5px;font-style:italic;color:#a9a9a9;margin:6px 2px 0}
 
 /* technologies as a vertical, expandable list */
 .ir-techlist{display:flex;flex-direction:column;gap:16px;margin:6px 0}
