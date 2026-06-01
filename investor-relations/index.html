@@ -745,14 +745,16 @@ html{scroll-behavior:smooth}
 
 /* dividends (vertical list) */
 .ir-divs{display:flex;flex-direction:column;gap:10px;margin:16px 0 8px}
-.ir-divs .d-row{display:grid;grid-template-columns:64px 1fr auto auto;align-items:center;gap:16px;background:#fff;border:1px solid #ece6ea;border-radius:12px;padding:14px 18px;box-shadow:0 4px 16px rgba(45,8,28,.05)}
+.ir-divs .d-row{display:grid;grid-template-columns:64px 1fr auto auto auto;align-items:center;gap:16px;background:#fff;border:1px solid #ece6ea;border-radius:12px;padding:14px 18px;box-shadow:0 4px 16px rgba(45,8,28,.05)}
 .ir-divs .d-yr{font-size:16px;color:#333;font-weight:800}
 .ir-divs .d-bar{height:10px;border-radius:6px;background:#f1eaee;overflow:hidden}
 .ir-divs .d-fill{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#6E0147,#a01a6e)}
-.ir-divs .d-val{font-size:22px;font-weight:800;color:#6E0147;line-height:1;text-align:right;min-width:74px}
+.ir-divs .d-val{display:flex;flex-direction:column;align-items:flex-end;font-size:22px;font-weight:800;color:#6E0147;line-height:1;text-align:right;min-width:74px}
+.ir-divs .d-total{display:flex;flex-direction:column;align-items:flex-end;font-size:22px;font-weight:800;color:#C9960C;line-height:1;text-align:right;min-width:104px;padding-left:18px;border-left:1px solid #eee}
+.ir-divs .d-val small,.ir-divs .d-total small{margin-top:5px;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#9a9a9a}
 .ir-divs .d-note{font-size:12px;color:#a01a6e;font-weight:700;text-align:right;min-width:84px}
 .ir-disc{font-size:12px;color:#969696;margin:6px 0 0}
-@media(max-width:560px){.ir-divs .d-row{grid-template-columns:48px 1fr auto;gap:10px}.ir-divs .d-note{grid-column:2/4;text-align:left;min-width:0}}
+@media(max-width:560px){.ir-divs .d-row{grid-template-columns:48px auto auto;gap:8px 12px}.ir-divs .d-bar{grid-column:1/4;order:5;margin-top:6px}.ir-divs .d-total{padding-left:0;border-left:none}.ir-divs .d-note{grid-column:2/4;text-align:left;min-width:0}}
 
 /* videos */
 .ir-videos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:18px 0 6px}
@@ -1229,8 +1231,8 @@ details.cmp-more[open] summary::after{content:" ▴"}
   
 <div class="ir-sec-head"><h2>Dividends</h2><a class="ir-more" href="/investor-relations/stocks/">Share details &rarr;</a></div>
 <p class="ir-lead" style="margin-bottom:14px">Novogenia AG follows a dividend strategy: as long as the development of the company is not impeded, it aims to pay a dividend to its shareholders every year.</p>
-<div class="ir-divs"><div class="d-row"><span class="d-yr">2021</span><span class="d-bar"><span class="d-fill" style="width:25%"></span></span><span class="d-val">&euro;0.44</span><span class="d-note">per share</span></div><div class="d-row"><span class="d-yr">2022</span><span class="d-bar"><span class="d-fill" style="width:100%"></span></span><span class="d-val">&euro;1.75</span><span class="d-note">COVID bonus</span></div><div class="d-row"><span class="d-yr">2023</span><span class="d-bar"><span class="d-fill" style="width:32%"></span></span><span class="d-val">&euro;0.56</span><span class="d-note">per share</span></div><div class="d-row"><span class="d-yr">2024</span><span class="d-bar"><span class="d-fill" style="width:32%"></span></span><span class="d-val">&euro;0.56</span><span class="d-note">per share</span></div><div class="d-row"><span class="d-yr">2025</span><span class="d-bar"><span class="d-fill" style="width:32%"></span></span><span class="d-val">&euro;0.56</span><span class="d-note">Proposal</span></div></div>
-<p class="ir-disc">The 2025 dividend is subject to approval by the Annual General Meeting. All figures shown per share.</p>
+<div class="ir-divs"><div class="d-row"><span class="d-yr">2021</span><span class="d-bar"><span class="d-fill" style="width:25%"></span></span><span class="d-val">&euro;0.44<small>per share</small></span><span class="d-total">&euro;5.28M<small>total payout</small></span><span class="d-note"></span></div><div class="d-row"><span class="d-yr">2022</span><span class="d-bar"><span class="d-fill" style="width:100%"></span></span><span class="d-val">&euro;1.75<small>per share</small></span><span class="d-total">&euro;21.00M<small>total payout</small></span><span class="d-note">COVID bonus</span></div><div class="d-row"><span class="d-yr">2023</span><span class="d-bar"><span class="d-fill" style="width:32%"></span></span><span class="d-val">&euro;0.56<small>per share</small></span><span class="d-total">&euro;6.72M<small>total payout</small></span><span class="d-note"></span></div><div class="d-row"><span class="d-yr">2024</span><span class="d-bar"><span class="d-fill" style="width:32%"></span></span><span class="d-val">&euro;0.56<small>per share</small></span><span class="d-total">&euro;6.72M<small>total payout</small></span><span class="d-note"></span></div><div class="d-row"><span class="d-yr">2025</span><span class="d-bar"><span class="d-fill" style="width:32%"></span></span><span class="d-val">&euro;0.56<small>per share</small></span><span class="d-total">&euro;6.72M<small>total payout</small></span><span class="d-note">Proposal</span></div></div>
+<p class="ir-disc">Total payout = dividend per share &times; 12,000,000 shares outstanding. The 2025 dividend is subject to approval by the Annual General Meeting.</p>
 
   <div class="ir-sec-head" id="brands-companies"><h2>Our brands</h2><a class="ir-more" href="/investor-relations/brands-companies/">All brands &amp; companies &rarr;</a></div>
   <p class="ir-lead" style="margin-bottom:10px">Consumer brands built on the Group&rsquo;s genetic-science platform.</p>
