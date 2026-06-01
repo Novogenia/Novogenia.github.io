@@ -600,7 +600,7 @@ a {
 @media(max-width:560px){.ir-stats{grid-template-columns:1fr 1fr}.ir-downloads .cta{padding:8px 14px}}
 /* ---- landing: section headers ---- */
 html{scroll-behavior:smooth}
-.ir-sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px;margin:48px 0 6px;scroll-margin-top:24px}
+.ir-sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px;margin:58px 0 8px;scroll-margin-top:24px}
 .ir-sec-head h2{margin:0;color:#6E0147;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.2}
 .ir-sec-head p{margin:0;color:#6b6b6b;font-size:15px;max-width:62ch}
 .ir-more{flex:none;font-size:14px;font-weight:700;color:#6E0147;text-decoration:none!important;white-space:nowrap}
@@ -635,26 +635,23 @@ html{scroll-behavior:smooth}
 .ir-cta .ir-btn.solid{background:#fff;color:#6E0147;border-color:#fff}
 .ir-cta .ir-btn.solid:hover{background:#E5E50F;border-color:#E5E50F;color:#3a0420}
 
-/* merged business segments + companies (expandable blocks) */
-.ir-segblocks{display:flex;flex-direction:column;gap:22px;margin:18px 0 6px}
-.ir-segblock{background:#fff;border:1px solid #ece6ea;border-radius:20px;padding:24px 26px 26px;box-shadow:0 6px 22px rgba(45,8,28,.06);border-top:5px solid #6E0147}
-.ir-segblock--olive{border-top-color:#8a8a17}
-.ir-segblock--gray{border-top-color:#8c8c8c}
-.segb-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.segb-ico{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#6E0147,#a01a6e);flex:0 0 52px}
-.ir-segblock--olive .segb-ico{background:linear-gradient(135deg,#8a8a17,#6f6f0f)}
-.ir-segblock--gray .segb-ico{background:linear-gradient(135deg,#8c8c8c,#6f6f6f)}
-.segb-ico svg{width:27px;height:27px;color:#fff}
-.segb-titles{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.segb-title{margin:0;color:#6E0147;font-size:21px;font-weight:800;letter-spacing:.4px}
-.ir-segblock--olive .segb-title{color:#6f6f0f}.ir-segblock--gray .segb-title{color:#5f5f5f}
-.segb-badge{background:#e5322b;color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:8px}
-.ir-segblock--gray .segb-badge,.ir-segblock--olive .segb-badge{background:#6E0147}
-.segb-intro{margin:12px 0 18px;font-size:15px;line-height:1.6;color:#4a4a4a;max-width:80ch}
-.segb-cos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.ir-coblock{background:#faf8f9;border:1px solid #efe7ec;border-radius:14px;overflow:hidden;transition:border-color .15s,box-shadow .15s}
-.ir-coblock[open]{border-color:#e2c9d8;box-shadow:0 8px 26px rgba(110,1,71,.12)}
-.ir-coblock summary{display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer;list-style:none}
+/* merged business segments + companies (3 solid-colored columns; light company boxes) */
+.ir-segblocks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start;margin:18px 0 6px}
+.ir-segblock{display:flex;flex-direction:column;border-radius:20px;padding:24px 22px 24px;box-shadow:0 14px 34px rgba(45,8,28,.16);background:linear-gradient(160deg,#6E0147,#4a0430);color:#fff}
+.ir-segblock--olive{background:linear-gradient(160deg,#8a8a17,#5f5f0c)}
+.ir-segblock--gray{background:linear-gradient(160deg,#7c7c7c,#565656)}
+.segb-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.segb-ico{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);flex:0 0 50px}
+.segb-ico svg{width:26px;height:26px;color:#fff}
+.segb-titles{display:flex;flex-direction:column;gap:9px;align-items:flex-start;min-width:0}
+.segb-title{margin:0;color:#fff;font-size:18px;font-weight:800;letter-spacing:.3px;line-height:1.2}
+.segb-badge{align-self:flex-start;background:rgba(255,255,255,.94);color:#3a0420;font-size:11.5px;font-weight:800;padding:5px 11px;border-radius:8px}
+.ir-segblock--olive .segb-badge{color:#46460a}.ir-segblock--gray .segb-badge{color:#3a3a3a}
+.segb-intro{margin:14px 0 16px;font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.9)}
+.segb-cos{display:grid;grid-template-columns:1fr;gap:10px}
+.ir-coblock{background:#fff;border:1px solid rgba(255,255,255,.55);border-radius:13px;overflow:hidden;transition:box-shadow .15s}
+.ir-coblock[open]{box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.ir-coblock summary{display:flex;align-items:center;gap:12px;padding:13px 14px;cursor:pointer;list-style:none}
 .ir-coblock summary::-webkit-details-marker{display:none}
 .cob-logo{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:10px;background:#fff;border:1px solid #efe7ec;flex:0 0 46px;overflow:hidden}
 .cob-logo img{max-width:100%;max-height:100%;object-fit:contain}
@@ -665,11 +662,12 @@ html{scroll-behavior:smooth}
 .cob-chev{flex:none;color:#b58aa4;transition:transform .2s}
 .cob-chev svg{width:20px;height:20px}
 .ir-coblock[open] .cob-chev{transform:rotate(180deg)}
-.cob-body{padding:0 16px 16px 76px}
-.cob-body p{margin:0 0 12px;font-size:14px;line-height:1.6;color:#4a4a4a}
+.cob-body{padding:0 14px 14px}
+.cob-body p{margin:0 0 12px;font-size:13.5px;line-height:1.55;color:#4a4a4a}
 .cob-link{display:inline-block;color:#fff;background:#6E0147;font-size:13px;font-weight:700;padding:8px 16px;border-radius:30px;text-decoration:none}
 .cob-link:hover{background:#a01a6e}
-@media(max-width:760px){.segb-cos{grid-template-columns:1fr}.cob-body{padding-left:16px}}
+@media(max-width:980px){.ir-segblocks{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ir-segblocks{grid-template-columns:1fr}}
 
 /* top highlights band */
 .ir-highlights{background:linear-gradient(135deg,#6E0147,#a01a6e);background-size:cover;background-position:center;border-radius:18px;padding:28px 30px;margin:0 0 30px}
@@ -678,6 +676,19 @@ html{scroll-behavior:smooth}
 .hl-feature-ico svg{width:30px;height:30px;color:#fff}
 .hl-feature-num{font-size:48px;font-weight:800;line-height:1;color:#fff;letter-spacing:-.5px}
 .hl-feature-lab{margin-top:8px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#f0d9aa}
+.hl-top{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px 40px;align-items:center;padding:4px 0 26px;margin:0 0 24px;border-bottom:1px solid rgba(255,255,255,.22)}
+.hl-top .hl-feature{padding:0;margin:0;align-items:flex-start;text-align:left;border-bottom:none}
+.hl-top .hl-feature-num{font-size:44px}
+.hl-rev{min-width:0}
+.hlrev-cap{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:#f0d9aa;margin-bottom:14px}
+.hlrev-row{display:flex;align-items:flex-end;gap:14px;height:150px}
+.hlrev-col{flex:1 1 0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.hlrev-val{font-size:13px;font-weight:800;color:#fff;margin-bottom:6px;white-space:nowrap}
+.hlrev-bar{width:100%;max-width:56px;border-radius:7px 7px 0 0;background:linear-gradient(180deg,#f3d486,#C9960C);box-shadow:0 6px 16px rgba(0,0,0,.22);transition:height .5s ease}
+.hlrev-yr{margin-top:8px;font-size:12px;font-weight:700;color:#f3e3ee}
+.hlrev-grow{flex:0 0 auto;align-self:center;transform:translateY(-10px)}
+.hlrev-pct{background:#fff;color:#1f9d55;font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap;box-shadow:0 5px 12px rgba(0,0,0,.18)}
+@media(max-width:760px){.hl-top{grid-template-columns:1fr;text-align:center}.hl-top .hl-feature{align-items:center;text-align:center}}
 .hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 28px}
 .hl-item{display:flex;align-items:flex-start;gap:14px}
 .hl-ico{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);flex:0 0 46px}
@@ -755,10 +766,10 @@ html{scroll-behavior:smooth}
 @media(max-width:900px){.ir-videos{grid-template-columns:1fr}}
 
 /* our brands (feature rows) */
-.ir-brandfeatures{display:flex;flex-direction:column;gap:22px;margin:18px 0 6px}
-.bf-row{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid #ece6ea;border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(45,8,28,.07)}
+.ir-brandfeatures{display:flex;flex-direction:column;gap:28px;margin:18px 0 6px}
+.bf-row{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:320px;background:#fff;border:1px solid #ece6ea;border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(45,8,28,.07)}
 .bf-row--rev .bf-media{order:2}
-.bf-media{min-height:260px;background:#faf8f9}
+.bf-media{min-height:320px;background:#faf8f9}
 .bf-media img{display:block;width:100%;height:100%;object-fit:cover}
 .bf-media--ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#6E0147,#a01a6e)}
 .bf-media--ph svg{width:64px;height:64px;color:#fff;opacity:.9}
@@ -831,6 +842,16 @@ html{scroll-behavior:smooth}
 
 /* competitive comparison */
 .ir-cmp{margin:18px 0 6px}
+.cmp-lead{font-size:15.5px;font-weight:600;color:#4a4a4a;margin:0 0 16px}
+.cmp-strengths{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:0 0 30px}
+.cmp-str{display:flex;align-items:flex-start;gap:14px;background:#fbf3f8;border:1px solid #efdde9;border-radius:14px;padding:16px 18px}
+.cmp-str-ico{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center}
+.cmp-str-ico svg{width:23px;height:23px;color:#fff}
+.cmp-str-tx{display:flex;flex-direction:column;min-width:0}
+.cmp-str-t{font-size:16px;font-weight:800;color:#6E0147;line-height:1.25}
+.cmp-str-s{margin-top:4px;font-size:13.5px;line-height:1.5;color:#5e5e5e}
+.cmp-tabh{margin:8px 0 12px;color:#3a0420;font-size:17px;font-weight:800}
+@media(max-width:680px){.cmp-strengths{grid-template-columns:1fr}}
 .cmp-wrap{overflow-x:auto;border:1px solid #ece6ea;border-radius:14px;box-shadow:0 6px 22px rgba(45,8,28,.06);background:#fff}
 table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;min-width:680px}
 table.cmp th,table.cmp td{padding:11px 14px;text-align:left;border-bottom:1px solid #f0ebee;white-space:nowrap}
@@ -849,6 +870,24 @@ details.cmp-more summary::after{content:" ▾";color:#a01a6e}
 details.cmp-more[open] summary::after{content:" ▴"}
 .cmp-note{font-size:12px;color:#969696;margin:8px 2px 0}
 
+/* technologies as a vertical, expandable list */
+.ir-techlist{display:flex;flex-direction:column;gap:16px;margin:6px 0}
+.ir-techrow{background:#fff;border:1px solid #ece6ea;border-radius:16px;box-shadow:0 6px 22px rgba(45,8,28,.06);overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.ir-techrow[open]{border-color:#e7cfe0;box-shadow:0 12px 30px rgba(45,8,28,.12)}
+.ir-techrow>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:20px 24px}
+.ir-techrow>summary::-webkit-details-marker{display:none}
+.tr-ico{flex:0 0 56px;width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center}
+.tr-ico svg{width:28px;height:28px;color:#fff}
+.tr-tx{display:flex;flex-direction:column;min-width:0;flex:1}
+.tr-title{font-size:20px;font-weight:800;color:#6E0147;line-height:1.25}
+.tr-lead{margin-top:4px;font-size:14px;line-height:1.55;color:#5e5e5e}
+.tr-chev{flex:0 0 auto;color:#a01a6e;display:flex;align-items:center;transition:transform .25s}
+.tr-chev svg{width:22px;height:22px}
+.ir-techrow[open] .tr-chev{transform:rotate(180deg)}
+.tr-body{padding:4px 24px 24px}
+.tr-body>p{margin:0 0 16px;font-size:15px;line-height:1.7;color:#454545}
+@media(max-width:640px){.ir-techrow>summary{padding:16px 16px;gap:14px}.tr-ico{flex-basis:48px;width:48px;height:48px}.tr-title{font-size:18px}.tr-body{padding:4px 16px 18px}}
+
 /* new building expansion */
 .ir-build{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#fff;border:1px solid #ece6ea;border-radius:18px;overflow:hidden;margin:22px 0 6px;box-shadow:0 8px 26px rgba(45,8,28,.07)}
 .build-media{position:relative;min-height:300px;background:#2d081c}
@@ -856,7 +895,12 @@ details.cmp-more[open] summary::after{content:" ▴"}
 .build-media.ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a0420,#6E0147)}
 .build-media.ph svg{width:64px;height:64px;color:rgba(255,255,255,.5)}
 .build-tx{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}
-.build-badge{align-self:flex-start;background:linear-gradient(135deg,#C9960C,#e0b020);color:#3a2400;font-weight:800;font-size:14px;padding:7px 16px;border-radius:999px;margin-bottom:14px}
+.build-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.build-badge{background:linear-gradient(135deg,#C9960C,#e0b020);color:#3a2400;font-weight:800;font-size:14px;padding:7px 16px;border-radius:999px}
+.build-badge--move{background:linear-gradient(135deg,#6E0147,#a01a6e);color:#fff}
+.build-ph-tx{display:flex;flex-direction:column;align-items:center;gap:12px;color:rgba(255,255,255,.72);text-align:center;padding:24px}
+.build-ph-tx svg{width:56px;height:56px}
+.build-ph-tx span{font-size:14px;font-weight:600;max-width:220px}
 .build-tx h3{margin:0 0 10px;color:#6E0147;font-size:24px;font-weight:800;line-height:1.2}
 .build-tx p{margin:0 0 14px;color:#5e5e5e;font-size:15px;line-height:1.6}
 .build-tx ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
@@ -908,24 +952,22 @@ details.cmp-more[open] summary::after{content:" ▴"}
 <nav class="ir-tabs" aria-label="Section navigation"><a class="ir-tab" href="#group-overview">Group overview</a><a class="ir-tab" href="#technologies">Technologies</a><a class="ir-tab" href="#brands-companies">Brands &amp; companies</a><a class="ir-tab" href="#newsroom">Newsroom</a><a class="ir-tab" href="#investor-relations-glance">Investor relations</a></nav>
 
   <section class="ir-highlights" style="background-image:linear-gradient(135deg,rgba(110,1,71,.94),rgba(160,26,110,.9)),url(/investor-relations/img/facility-hq.jpg)">
-  <div class="hl-feature">
-    <span class="hl-feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 5.5A7 7 0 1 0 16.5 18.5"/><line x1="4.5" y1="10" x2="13" y2="10"/><line x1="4.5" y1="14" x2="12" y2="14"/></svg></span>
-    <span class="hl-feature-num">~&euro;0.5 billion</span>
-    <span class="hl-feature-lab">cumulative revenue since 2009</span>
+  <div class="hl-top">
+    <div class="hl-feature">
+      <span class="hl-feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 5.5A7 7 0 1 0 16.5 18.5"/><line x1="4.5" y1="10" x2="13" y2="10"/><line x1="4.5" y1="14" x2="12" y2="14"/></svg></span>
+      <span class="hl-feature-num">~&euro;0.5 billion</span>
+      <span class="hl-feature-lab">cumulative revenue since 2009</span>
+    </div>
+    <div class="hl-rev"><span class="hlrev-cap">Company revenue development</span><div class="hlrev-row"><div class="hlrev-col"><span class="hlrev-val">&euro;18.2M</span><span class="hlrev-bar" style="height:33%"></span><span class="hlrev-yr">2023</span></div><div class="hlrev-grow"><span class="hlrev-pct">&#9650; +39%</span></div><div class="hlrev-col"><span class="hlrev-val">&euro;25.3M</span><span class="hlrev-bar" style="height:47%"></span><span class="hlrev-yr">2024</span></div><div class="hlrev-grow"><span class="hlrev-pct">&#9650; +115%</span></div><div class="hlrev-col"><span class="hlrev-val">&euro;54.3M</span><span class="hlrev-bar" style="height:100%"></span><span class="hlrev-yr">2025</span></div></div></div>
   </div>
   <div class="hl-grid"><div class="hl-item"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5"/></svg></span><span class="hl-tx"><span class="hl-t">European market leader</span><span class="hl-s">Founded in 2009</span></span></div><div class="hl-item"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></span><span class="hl-tx"><span class="hl-t">Stock listed</span><span class="hl-s">On the Munich Stock Exchange</span></span></div><div class="hl-item"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span><span class="hl-tx"><span class="hl-t">High-capacity laboratory</span><span class="hl-s">Record: 275,000 samples per day</span></span></div><div class="hl-item"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)"/></svg></span><span class="hl-tx"><span class="hl-t">Technology leader</span><span class="hl-s">In-house lab, supplement &amp; cosmetics manufacturing</span></span></div><div class="hl-item"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.2 2.9 7.6 7 9 4.1-1.4 7-4.8 7-9V6z"/><polyline points="9 11.5 11.2 13.7 15.5 9.4"/></svg></span><span class="hl-tx"><span class="hl-t">Highest quality</span><span class="hl-s">ISO&nbsp;9001 &middot; ISO&nbsp;22000 &middot; ISO&nbsp;22176 &middot; Medical Genetics License &middot; CLIA</span></span></div><div class="hl-item"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 5.5A7 7 0 1 0 16.5 18.5"/><line x1="4.5" y1="10" x2="13" y2="10"/><line x1="4.5" y1="14" x2="12" y2="14"/></svg></span><span class="hl-tx"><span class="hl-t">Profitable since 2013</span><span class="hl-s">Sustained profitability</span></span></div></div>
 </section>
 
-  
-<section class="ir-chart ir-chart--rev">
-  <h3>Company revenue development</h3>
-  <p class="gr-sub">Consolidated group revenue &mdash; nearly tripling from &euro;18.2M (2023) to &euro;54.3M (2025).</p>
-  <div class="bc-row"><div class="bc-col"><span class="bc-val">&euro;18.17M</span><span class="bc-bar" style="height:34%"></span><span class="bc-yr">2023</span></div><div class="bc-grow"><span class="bc-pct">+39%</span><span class="bc-arrow">&#9650;</span></div><div class="bc-col"><span class="bc-val">&euro;25.29M</span><span class="bc-bar" style="height:47%"></span><span class="bc-yr">2024</span></div><div class="bc-grow"><span class="bc-pct">+115%</span><span class="bc-arrow">&#9650;</span></div><div class="bc-col"><span class="bc-val">&euro;54.30M</span><span class="bc-bar" style="height:100%"></span><span class="bc-yr">2025</span></div></div>
-  <div class="gr-legend"><span class="lg-base">Group revenue</span><span class="lg-grow">Year-over-year growth</span></div>
-</section>
-
   <div class="ir-sec-head" id="group-overview"><h2>Company achievements</h2><p>A fully integrated value chain &mdash; everything from laboratory to finished product, in house.</p></div>
   <div class="ir-achv"><div class="achv-item"><span class="achv-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12.5 9.5 18 20 6"/></svg></span><span class="achv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span><span class="achv-label">In-house laboratory</span></div><div class="achv-item"><span class="achv-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12.5 9.5 18 20 6"/></svg></span><span class="achv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v3"/><path d="M8.5 20h7"/><path d="M14 10 17 4"/></svg></span><span class="achv-label">In-house supplement manufacture</span></div><div class="achv-item"><span class="achv-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12.5 9.5 18 20 6"/></svg></span><span class="achv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="9" width="10" height="11" rx="2"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/><line x1="9.5" y1="13" x2="14.5" y2="13"/></svg></span><span class="achv-label">In-house cosmetics manufacture</span></div><div class="achv-item"><span class="achv-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12.5 9.5 18 20 6"/></svg></span><span class="achv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 5.5A7 7 0 1 0 16.5 18.5"/><line x1="4.5" y1="10" x2="13" y2="10"/><line x1="4.5" y1="14" x2="12" y2="14"/></svg></span><span class="achv-label">Profitable since 2013</span></div><div class="achv-item"><span class="achv-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12.5 9.5 18 20 6"/></svg></span><span class="achv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10" y="10" width="4" height="4"/><line x1="9.5" y1="3.5" x2="9.5" y2="6.5"/><line x1="14.5" y1="3.5" x2="14.5" y2="6.5"/><line x1="9.5" y1="17.5" x2="9.5" y2="20.5"/><line x1="14.5" y1="17.5" x2="14.5" y2="20.5"/><line x1="3.5" y1="9.5" x2="6.5" y2="9.5"/><line x1="3.5" y1="14.5" x2="6.5" y2="14.5"/><line x1="17.5" y1="9.5" x2="20.5" y2="9.5"/><line x1="17.5" y1="14.5" x2="20.5" y2="14.5"/></svg></span><span class="achv-label">Technology leader</span></div></div>
+
+  <div class="ir-sec-head"><h2>Our mission</h2><p>Analyse. Learn. Solve. Explore. &mdash; the principle behind every Novogenia product.</p></div>
+  <div class="ir-mission"><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20.5" y1="20.5" x2="15.5" y2="15.5"/><line x1="8" y1="11" x2="8" y2="13"/><line x1="11" y1="8.5" x2="11" y2="13"/><line x1="13" y1="10.5" x2="13" y2="13"/></svg></span><h3>Analyse</h3><p>Using advanced technologies in our laboratories to decypher the human genome and metabolome.</p><ul><li>Genetic analysis for optimized nutrition</li><li>Disease prevention &amp; therapy optimization</li><li>Virological &amp; diagnostic analyses</li><li>Genetic analysis for IVF improvement</li></ul></div><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="3.5" x2="9" y2="6.5"/><line x1="15" y1="3.5" x2="15" y2="6.5"/><line x1="9" y1="17.5" x2="9" y2="20.5"/><line x1="15" y1="17.5" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6.5" y2="9"/><line x1="3.5" y1="15" x2="6.5" y2="15"/><line x1="17.5" y1="9" x2="20.5" y2="9"/><line x1="17.5" y1="15" x2="20.5" y2="15"/></svg></span><h3>Learn</h3><p>Using artificial intelligence to interpret genetic data for unparalleled insights into the body.</p><ul><li>AI-powered identification of genetic traits</li><li>Detect inefficiencies in therapies via lab analytics</li><li>&ldquo;Analyse &rarr; product &rarr; re-analyse&rdquo; feedback loop</li><li>Decypher millions of scientific publications</li></ul></div><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span><h3>Solve</h3><p>Based on unique personal data, personalized solutions are produced for each individual.</p><ul><li>Genetic reports with personalized action plans</li><li>Personalized supplements &amp; cosmetics</li><li>Optimized therapies and IVF cycles</li><li>Personalized drug development as infusions</li></ul></div><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="15.6 8.4 10.9 10.9 8.4 15.6 13.1 13.1"/></svg></span><h3>Explore</h3><p>Applying the principle of Analyse &middot; Learn &middot; Solve across biotechnology.</p><ul><li>Acquisitions in the biotech sector</li><li>In-house startups to expand the portfolio</li><li>Clinical studies to assess product performance</li></ul></div></div>
 
   <div class="ir-sec-head"><h2>Business segments &amp; companies</h2><p>Our operating divisions and the companies within them &mdash; click any company to learn more.</p></div>
   <div class="ir-segblocks"><section class="ir-segblock ir-segblock--plum">
@@ -995,15 +1037,18 @@ details.cmp-more[open] summary::after{content:" ▴"}
 
   
 <section class="ir-chart ir-chart--diag">
-  <h3>Diagnostics &amp; Personalized Products &mdash; segment revenue</h3>
-  <p class="gr-sub">Revenue trend 2012&ndash;2025 &mdash; record demand through the pandemic (highlighted), then a renewed surge driven by genetic testing and personalized products.</p>
-  <div class="bc-row"><div class="bc-col"><span class="bc-bar" style="height:7%"></span><span class="bc-yr">2012</span></div><div class="bc-col"><span class="bc-bar" style="height:10%"></span><span class="bc-yr">2013</span></div><div class="bc-col"><span class="bc-bar" style="height:14%"></span><span class="bc-yr">2014</span></div><div class="bc-col"><span class="bc-bar" style="height:19%"></span><span class="bc-yr">2015</span></div><div class="bc-col"><span class="bc-bar" style="height:25%"></span><span class="bc-yr">2016</span></div><div class="bc-col"><span class="bc-bar" style="height:31%"></span><span class="bc-yr">2017</span></div><div class="bc-col"><span class="bc-bar" style="height:38%"></span><span class="bc-yr">2018</span></div><div class="bc-col"><span class="bc-bar" style="height:45%"></span><span class="bc-yr">2019</span></div><div class="bc-col bc-col--covid"><span class="bc-bar" style="height:64%"></span><span class="bc-yr">2020</span></div><div class="bc-col bc-col--covid"><span class="bc-bar" style="height:82%"></span><span class="bc-yr">2021</span></div><div class="bc-col bc-col--covid"><span class="bc-bar" style="height:58%"></span><span class="bc-yr">2022</span></div><div class="bc-col"><span class="bc-bar" style="height:42%"></span><span class="bc-yr">2023</span></div><div class="bc-grow"><span class="bc-pct">+67%</span><span class="bc-arrow">&#9650;</span></div><div class="bc-col"><span class="bc-bar" style="height:70%"></span><span class="bc-yr">2024</span></div><div class="bc-grow"><span class="bc-pct">+43%</span><span class="bc-arrow">&#9650;</span></div><div class="bc-col"><span class="bc-bar" style="height:100%"></span><span class="bc-yr">2025</span></div></div>
-  <div class="gr-legend"><span class="lg-base">Base years</span><span class="lg-covid">COVID years</span><span class="lg-grow">Year-over-year growth</span></div>
+  <h3>Revenue growth of this segment</h3>
+  <p class="gr-sub">Diagnostics &amp; Personalized Products revenue, 2012&ndash;2025 &mdash; steady expansion of genetic testing and personalized products, with a renewed surge of +160% (2024) and +54% (2025).</p>
+  <div class="bc-row"><div class="bc-col"><span class="bc-bar" style="height:5%"></span><span class="bc-yr">2012</span></div><div class="bc-col"><span class="bc-bar" style="height:8%"></span><span class="bc-yr">2013</span></div><div class="bc-col"><span class="bc-bar" style="height:11%"></span><span class="bc-yr">2014</span></div><div class="bc-col"><span class="bc-bar" style="height:15%"></span><span class="bc-yr">2015</span></div><div class="bc-col"><span class="bc-bar" style="height:19%"></span><span class="bc-yr">2016</span></div><div class="bc-col"><span class="bc-bar" style="height:23%"></span><span class="bc-yr">2017</span></div><div class="bc-col"><span class="bc-bar" style="height:27%"></span><span class="bc-yr">2018</span></div><div class="bc-col"><span class="bc-bar" style="height:31%"></span><span class="bc-yr">2019</span></div><div class="bc-col"><span class="bc-bar" style="height:35%"></span><span class="bc-yr">2020</span></div><div class="bc-col"><span class="bc-bar" style="height:37%"></span><span class="bc-yr">2021</span></div><div class="bc-col"><span class="bc-bar" style="height:33%"></span><span class="bc-yr">2022</span></div><div class="bc-col"><span class="bc-bar" style="height:25%"></span><span class="bc-yr">2023</span></div><div class="bc-grow"><span class="bc-pct">+160%</span><span class="bc-arrow">&#9650;</span></div><div class="bc-col"><span class="bc-bar" style="height:65%"></span><span class="bc-yr">2024</span></div><div class="bc-grow"><span class="bc-pct">+54%</span><span class="bc-arrow">&#9650;</span></div><div class="bc-col"><span class="bc-bar" style="height:100%"></span><span class="bc-yr">2025</span></div></div>
+  <div class="gr-legend"><span class="lg-base">Segment revenue</span><span class="lg-grow">Year-over-year growth</span></div>
 </section>
 
   <div class="ir-sec-head"><h2>Competitive comparison</h2><p>How Novogenia compares against the personalized-health field.</p></div>
   
 <section class="ir-cmp">
+  <p class="cmp-lead">Novogenia is the only provider that combines all four capabilities &mdash; under one roof:</p>
+  <div class="cmp-strengths"><div class="cmp-str"><span class="cmp-str-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span><span class="cmp-str-tx"><span class="cmp-str-t">In-house genetic laboratory</span><span class="cmp-str-s">Accredited high-throughput DNA &amp; blood laboratory &mdash; analysis is done in house, not outsourced.</span></span></div><div class="cmp-str"><span class="cmp-str-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="9" width="10" height="11" rx="2"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/><line x1="9.5" y1="13" x2="14.5" y2="13"/></svg></span><span class="cmp-str-tx"><span class="cmp-str-t">Personalized supplements</span><span class="cmp-str-s">Supplements formulated individually from each customer&rsquo;s own lab-analysis data.</span></span></div><div class="cmp-str"><span class="cmp-str-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20.5" y1="20.5" x2="15.5" y2="15.5"/><line x1="8" y1="11" x2="8" y2="13"/><line x1="11" y1="8.5" x2="11" y2="13"/><line x1="13" y1="10.5" x2="13" y2="13"/></svg></span><span class="cmp-str-tx"><span class="cmp-str-t">Personalized cosmetics</span><span class="cmp-str-s">Skincare matched to genetic and skin-analysis data &mdash; not off-the-shelf.</span></span></div><div class="cmp-str"><span class="cmp-str-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v3"/><path d="M8.5 20h7"/><path d="M14 10 17 4"/></svg></span><span class="cmp-str-tx"><span class="cmp-str-t">In-house manufacturing</span><span class="cmp-str-s">Supplements and cosmetics are produced under our own roof, end to end.</span></span></div></div>
+  <h3 class="cmp-tabh">How Novogenia compares against the field</h3>
   <div class="cmp-wrap">
     <table class="cmp">
       <thead><tr><th>Company</th><th>Origin</th><th>Lab testing</th><th>Supplements</th><th>Cosmetics</th><th>Manufacturing</th></tr></thead>
@@ -1014,28 +1059,28 @@ details.cmp-more[open] summary::after{content:" ▴"}
       <table class="cmp"><tbody><tr class=""><td class="c-co">DNAfit</td><td>United Kingdom</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone a">Standard</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">23andMe</td><td>United States</td><td><span class="cmp-tone g">In house</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td></tr><tr class=""><td class="c-co">Nutrigenomix</td><td>Canada</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td></tr><tr class=""><td class="c-co">Vitagene</td><td>United States</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone a">Standard</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">InsideTracker</td><td>United States</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone a">Marketer</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td></tr><tr class=""><td class="c-co">Viome</td><td>United States</td><td><span class="cmp-tone g">In house</span></td><td><span class="cmp-tone g">Personalized</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">Persona Nutrition</td><td>United States</td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone g">Personalized</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">Care/of</td><td>United States</td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone g">Personalized</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">Rootine</td><td>United States</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone g">Personalized</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">GenePlanet</td><td>Slovenia</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone a">Standard</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">CircleDNA</td><td>Hong Kong</td><td><span class="cmp-tone g">In house</span></td><td><span class="cmp-tone a">Standard</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">Atlas Biomed</td><td>United Kingdom</td><td><span class="cmp-tone g">In house</span></td><td><span class="cmp-tone a">Standard</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone a">Outsourced</span></td></tr><tr class=""><td class="c-co">SelfDecode</td><td>United States</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone a">Standard</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td></tr><tr class=""><td class="c-co">MyHeritage</td><td>Israel</td><td><span class="cmp-tone g">In house</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td></tr><tr class=""><td class="c-co">tellmeGen</td><td>Spain</td><td><span class="cmp-tone a">Outsourced</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone n">—</span></td></tr><tr class=""><td class="c-co">Nourished</td><td>United Kingdom</td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone g">Personalized</span></td><td><span class="cmp-tone n">—</span></td><td><span class="cmp-tone g">In house</span></td></tr></tbody></table>
     </details>
   </div>
-  <p class="cmp-note">Novogenia is the only provider combining in-house genetic laboratory, personalized supplement and cosmetics formulation and in-house manufacturing under one roof.</p>
+  <p class="cmp-note">Across the personalized-health field, no competitor matches all four capabilities &mdash; most outsource laboratory testing and manufacturing, and none offer personalized cosmetics.</p>
 </section>
 
+  <div class="ir-sec-head"><h2>Our global market</h2><p>A globally active group &mdash; with resellers and customers across the world.</p></div>
   
 <section class="ir-global">
-  <div class="g-lead"><h2>Our global market</h2><p>Countries where Novogenia products are sold &mdash; active resellers and partners across six continents.</p></div>
   <div class="g-map"><img src="/investor-relations/img/company-countries.jpeg" alt="World map highlighting the countries where Novogenia products are sold" loading="lazy"/></div>
   <div class="g-stats">
     <div class="g-stat"><span class="n">69</span><span class="l">Countries with active resellers</span></div>
-    <div class="g-stat"><span class="n">1M</span><span class="l">Genomes &mdash; UAE / G42 project</span></div>
-    <div class="g-stat"><span class="n">570k+</span><span class="l">DNA tests per year (capacity)</span></div>
+    <div class="g-stat"><span class="n">275,000</span><span class="l">Tests per day &mdash; record</span></div>
+    <div class="g-stat"><span class="n">16</span><span class="l">Years of experience in diagnostics</span></div>
   </div>
 </section>
 
-  <div class="ir-sec-head"><h2>New building &amp; expansion</h2><p>A &euro;35 million investment in the next decade of capacity.</p></div>
+  <div class="ir-sec-head"><h2>New building &amp; expansion</h2><p>A &euro;40 million investment in the next decade of capacity.</p></div>
   
 <section class="ir-build">
-  <div class="build-media"><img src="/investor-relations/img/facility-hq.jpg" alt="Novogenia new building and laboratory expansion" loading="lazy"/></div>
+  <div class="build-media"><img src="/investor-relations/img/novogenia-newbuilding.jpeg" alt="Novogenia AG new headquarters and laboratory building" loading="lazy"/></div>
   <div class="build-tx">
-    <span class="build-badge">&euro;35 Million Investment</span>
+    <div class="build-badges"><span class="build-badge">&euro;40 Million Investment</span><span class="build-badge build-badge--move">Move-in: end of 2028</span></div>
     <h3>New building &amp; capacity expansion</h3>
-    <p>Novogenia is investing in a new state-of-the-art headquarters and laboratory complex &mdash; massively expanding diagnostic, supplement and cosmetics production capacity to meet accelerating global demand.</p>
+    <p>Novogenia is investing &euro;40 million in a new, state-of-the-art headquarters and laboratory complex &mdash; massively expanding diagnostic, supplement and cosmetics production capacity to meet accelerating global demand. The Group expects to move into the new building at the end of 2028.</p>
     <ul>
       <li>Expanded high-throughput genetic laboratory</li>
       <li>Scaled in-house supplement &amp; cosmetics manufacturing</li>
@@ -1045,14 +1090,17 @@ details.cmp-more[open] summary::after{content:" ▴"}
   </div>
 </section>
 
-  <div class="ir-sec-head"><h2>Our mission</h2><p>Analyse. Learn. Solve. Explore. &mdash; the principle behind every Novogenia product.</p></div>
-  <div class="ir-mission"><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20.5" y1="20.5" x2="15.5" y2="15.5"/><line x1="8" y1="11" x2="8" y2="13"/><line x1="11" y1="8.5" x2="11" y2="13"/><line x1="13" y1="10.5" x2="13" y2="13"/></svg></span><h3>Analyse</h3><p>Using advanced technologies in our laboratories to decypher the human genome and metabolome.</p><ul><li>Genetic analysis for optimized nutrition</li><li>Disease prevention &amp; therapy optimization</li><li>Virological &amp; diagnostic analyses</li><li>Genetic analysis for IVF improvement</li></ul></div><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="3.5" x2="9" y2="6.5"/><line x1="15" y1="3.5" x2="15" y2="6.5"/><line x1="9" y1="17.5" x2="9" y2="20.5"/><line x1="15" y1="17.5" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6.5" y2="9"/><line x1="3.5" y1="15" x2="6.5" y2="15"/><line x1="17.5" y1="9" x2="20.5" y2="9"/><line x1="17.5" y1="15" x2="20.5" y2="15"/></svg></span><h3>Learn</h3><p>Using artificial intelligence to interpret genetic data for unparalleled insights into the body.</p><ul><li>AI-powered identification of genetic traits</li><li>Detect inefficiencies in therapies via lab analytics</li><li>&ldquo;Analyse &rarr; product &rarr; re-analyse&rdquo; feedback loop</li><li>Decypher millions of scientific publications</li></ul></div><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span><h3>Solve</h3><p>Based on unique personal data, personalized solutions are produced for each individual.</p><ul><li>Genetic reports with personalized action plans</li><li>Personalized supplements &amp; cosmetics</li><li>Optimized therapies and IVF cycles</li><li>Personalized drug development as infusions</li></ul></div><div class="ir-mcard"><span class="m-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="15.6 8.4 10.9 10.9 8.4 15.6 13.1 13.1"/></svg></span><h3>Explore</h3><p>Applying the principle of Analyse &middot; Learn &middot; Solve across biotechnology.</p><ul><li>Acquisitions in the biotech sector</li><li>In-house startups to expand the portfolio</li><li>Clinical studies to assess product performance</li></ul></div></div>
-
   <div class="ir-sec-head" id="technologies"><h2>Technologies</h2><a class="ir-more" href="/investor-relations/technologies/">All technologies &rarr;</a></div>
-  <div class="ir-cards"><a class="ir-card" href="/investor-relations/technologies/genetic-laboratory/"><span class="cover cover-cover"><img src="/investor-relations/img/facility-lab.jpg" alt="" loading="lazy"/><span class="ico-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c0 5 10 6 10 11s-10 6-10 10"/><path d="M17 3c0 5-10 6-10 11s10 6 10 10" opacity=".5"/><line x1="8.5" y1="6" x2="15.5" y2="6"/><line x1="9.5" y1="9" x2="14.5" y2="9"/><line x1="9.5" y1="15" x2="14.5" y2="15"/><line x1="8.5" y1="18" x2="15.5" y2="18"/></svg></span></span><span class="body"><h3>Genetic Laboratory</h3><p>High-throughput analysis of the human genome and metabolome in our accredited laboratories.</p><span class="go">View &rarr;</span></span></a><a class="ir-card" href="/investor-relations/technologies/personalized-supplementation/"><span class="cover cover-cover"><img src="/investor-relations/img/market-supplements.png" alt="" loading="lazy"/><span class="ico-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span></span><span class="body"><h3>Personalized Supplementation</h3><p>Supplements formulated for each customer from their lab-analysis data.</p><span class="go">View &rarr;</span></span></a><a class="ir-card" href="/investor-relations/technologies/personalized-cosmetics/"><span class="cover cover-cover"><img src="/investor-relations/img/reagenz.png" alt="" loading="lazy"/><span class="ico-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20.5" y1="20.5" x2="15.5" y2="15.5"/><line x1="8" y1="11" x2="8" y2="13"/><line x1="11" y1="8.5" x2="11" y2="13"/><line x1="13" y1="10.5" x2="13" y2="13"/></svg></span></span><span class="body"><h3>Personalized Cosmetics</h3><p>Cosmetics personalized from genetic and skin-analysis data.</p><span class="go">View &rarr;</span></span></a><a class="ir-card" href="/investor-relations/technologies/artificial-intelligence/"><span class="cover cover-pad"><img src="/investor-relations/img/data.png" alt="" loading="lazy"/><span class="ico-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="3.5" x2="9" y2="6.5"/><line x1="15" y1="3.5" x2="15" y2="6.5"/><line x1="9" y1="17.5" x2="9" y2="20.5"/><line x1="15" y1="17.5" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6.5" y2="9"/><line x1="3.5" y1="15" x2="6.5" y2="15"/><line x1="17.5" y1="9" x2="20.5" y2="9"/><line x1="17.5" y1="15" x2="20.5" y2="15"/></svg></span></span><span class="body"><h3>Artificial Intelligence</h3><p>AI engines that interpret genetic data and millions of scientific publications.</p><span class="go">View &rarr;</span></span></a></div>
-
-  <div class="ir-sec-head"><h2>Our laboratory spectrum</h2><p>From lifestyle DNA tests to high-end clinical applications.</p></div>
-  
+  <div class="ir-techlist"><details class="ir-techrow" open>
+  <summary>
+    <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c0 5 10 6 10 11s-10 6-10 10"/><path d="M17 3c0 5-10 6-10 11s10 6 10 10" opacity=".5"/><line x1="8.5" y1="6" x2="15.5" y2="6"/><line x1="9.5" y1="9" x2="14.5" y2="9"/><line x1="9.5" y1="15" x2="14.5" y2="15"/><line x1="8.5" y1="18" x2="15.5" y2="18"/></svg></span>
+    <span class="tr-tx"><span class="tr-title">Genetic Laboratory</span><span class="tr-lead">High-throughput analysis of the human genome and metabolome in our accredited laboratories.</span></span>
+    <span class="tr-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+  </summary>
+  <div class="tr-body">
+    <p>Our accredited, high-throughput genetic and blood laboratory in Salzburg decodes the human genome and metabolome at scale. From a single sample we run DNA analysis and biochemical, virological and diagnostic testing under ISO-accredited quality systems &mdash; the analytical foundation for every personalized product and therapy in the Group. Expand to see the full spectrum of analyses, from lifestyle DNA tests to high-end clinical applications.</p>
+    <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/genetic-laboratory/">Learn more &rarr;</a></div>
+    
 <section class="ir-spectrum">
   <div class="sp-track"></div>
   <div class="sp-grid"><div class="sp-card" style="--i:0">
@@ -1088,6 +1136,41 @@ details.cmp-more[open] summary::after{content:" ▴"}
   </div></div>
   <div class="sp-axis"><span class="sp-axis-l">Lifestyle</span><span class="sp-axis-line"></span><span class="sp-axis-r">High-End Medical</span></div>
 </section>
+  </div>
+</details><details class="ir-techrow">
+  <summary>
+    <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span>
+    <span class="tr-tx"><span class="tr-title">Personalized Supplementation</span><span class="tr-lead">Supplements formulated for each customer from their own lab-analysis data.</span></span>
+    <span class="tr-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+  </summary>
+  <div class="tr-body">
+    <p>Each supplement is formulated individually from the customer&rsquo;s own genetic and lab-analysis data and produced in house &mdash; the right nutrients, in the right dose, matched to that person&rsquo;s biology. This closes the loop from analysis to a finished, personalized product manufactured under our own roof.</p>
+    <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/personalized-supplementation/">Learn more &rarr;</a></div>
+    
+  </div>
+</details><details class="ir-techrow">
+  <summary>
+    <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20.5" y1="20.5" x2="15.5" y2="15.5"/><line x1="8" y1="11" x2="8" y2="13"/><line x1="11" y1="8.5" x2="11" y2="13"/><line x1="13" y1="10.5" x2="13" y2="13"/></svg></span>
+    <span class="tr-tx"><span class="tr-title">Personalized Cosmetics</span><span class="tr-lead">Cosmetics personalized from genetic and skin-analysis data.</span></span>
+    <span class="tr-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+  </summary>
+  <div class="tr-body">
+    <p>Skincare is personalized from genetic and skin-analysis data and manufactured in house, so each formulation targets the individual&rsquo;s specific skin biology rather than a one-size-fits-all product &mdash; another fully integrated, in-house value chain.</p>
+    <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/personalized-cosmetics/">Learn more &rarr;</a></div>
+    
+  </div>
+</details><details class="ir-techrow">
+  <summary>
+    <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="3.5" x2="9" y2="6.5"/><line x1="15" y1="3.5" x2="15" y2="6.5"/><line x1="9" y1="17.5" x2="9" y2="20.5"/><line x1="15" y1="17.5" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6.5" y2="9"/><line x1="3.5" y1="15" x2="6.5" y2="15"/><line x1="17.5" y1="9" x2="20.5" y2="9"/><line x1="17.5" y1="15" x2="20.5" y2="15"/></svg></span>
+    <span class="tr-tx"><span class="tr-title">Artificial Intelligence</span><span class="tr-lead">AI engines that interpret genetic data and millions of scientific publications.</span></span>
+    <span class="tr-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+  </summary>
+  <div class="tr-body">
+    <p>Our AI engines interpret genetic data against millions of scientific publications, identifying the traits and relationships that turn raw lab data into actionable insight. The same models continuously improve our reports, detect inefficiencies in therapies, and power the &ldquo;analyse &rarr; product &rarr; re-analyse&rdquo; feedback loop at the heart of the Group.</p>
+    <div class="ir-btnrow"><a class="ir-btn ghost" href="/investor-relations/technologies/artificial-intelligence/">Learn more &rarr;</a></div>
+    
+  </div>
+</details></div>
 
   
 <div class="ir-sec-head"><h2>Media</h2><p>Films from the Novogenia Academy &mdash; the science behind our analyses and products.</p></div>
@@ -1101,18 +1184,35 @@ details.cmp-more[open] summary::after{content:" ▴"}
     <div class="sl-chart-head"><span class="sl-dot"></span>Live price &mdash; XETRA / Munich <span class="sl-sym">MUN:7V0</span></div>
     <div class="tradingview-widget-container" style="height:480px;width:100%">
       <div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
       {
-      "autosize": true,
-      "symbol": "MUN:7V0",
-      "interval": "D",
-      "timezone": "Europe/Berlin",
-      "theme": "light",
-      "style": "1",
+      "symbols": [["Novogenia AG", "MUN:7V0|1Y"]],
+      "chartOnly": false,
+      "width": "100%",
+      "height": "100%",
       "locale": "en",
-      "withdateranges": true,
-      "hide_side_toolbar": true,
-      "allow_symbol_change": false,
+      "colorTheme": "light",
+      "autosize": true,
+      "showVolume": false,
+      "showMA": false,
+      "hideDateRanges": false,
+      "hideMarketStatus": false,
+      "hideSymbolLogo": false,
+      "scalePosition": "right",
+      "scaleMode": "Normal",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+      "fontSize": "10",
+      "noTimeScale": false,
+      "valuesTracking": "1",
+      "changeMode": "price-and-percent",
+      "chartType": "area",
+      "lineWidth": 2,
+      "lineType": 0,
+      "lineColor": "#6E0147",
+      "topColor": "rgba(110, 1, 71, 0.25)",
+      "bottomColor": "rgba(110, 1, 71, 0.00)",
+      "dateRanges": ["1m|30","3m|60","12m|1D","60m|1W","all|1M"],
+      "timezone": "Europe/Berlin",
       "support_host": "https://www.tradingview.com"
       }
       </script>
@@ -1160,9 +1260,9 @@ details.cmp-more[open] summary::after{content:" ▴"}
   <div class="ir-leaders">
   <article class="ir-leader ir-leader--lead"><div class="ld-photo"><img src="/investor-relations/img/staff-daniel.webp" alt="Dr. Daniel Wallerstorfer" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Founder &amp; Chief Executive Officer &middot; Management Board</span><h3>Dr. Daniel Wallerstorfer <span class="ld-title">PhD, BSc</span></h3><p>Molecular biologist with a PhD in Biotechnology and founder of Novogenia. Daniel built the company into a leading laboratory for genetic testing and personalized health, driving the Group&rsquo;s research, technology and product innovation. During the COVID-19 pandemic the group became a leading SARS-CoV-2 testing laboratory, and the holding company was listed on the Munich Stock Exchange. He is also a science author who educates the public about the power of our genes.</p></div></article>
   <h3 class="ld-group">Management Board</h3>
-  <div class="ir-leaders-grid"><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-felix.png" alt="Felix Bausch" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Management Board &middot; Investor Relations &amp; M&amp;A</span><h3>Felix Bausch</h3><p>Member of the Management Board, leading Investor Relations and Mergers &amp; Acquisitions for the Group from Munich &mdash; managing the capital-market relationships and the acquisition pipeline that drive Novogenia&rsquo;s growth strategy.</p></div></article><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-matthias.png" alt="Matthias Probst" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Chief Financial Officer &amp; Co-founder</span><h3>Matthias Probst</h3><p>Co-founder of Novogenia GmbH and Chief Financial Officer of the Group. Matthias oversees finance across the holding and its operating companies, providing the financial foundation for the Group&rsquo;s expansion.</p></div></article></div>
+  <div class="ir-leaders-grid"><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-felix.png" alt="Felix Bausch" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Management Board &middot; Investor Relations &amp; M&amp;A</span><h3>Felix Bausch</h3><p>Member of the Management Board, leading Investor Relations and Mergers &amp; Acquisitions for the Group from Munich &mdash; managing the capital-market relationships and the acquisition pipeline that drive Novogenia&rsquo;s growth strategy.</p></div></article><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-matthias.png" alt="Matthias Probst" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Chief Financial Officer &amp; Co-founder</span><h3>Matthias Probst <span class="ld-title">Mag. (FH)</span></h3><p>Co-founder of Novogenia GmbH and Chief Financial Officer of the Group. Matthias oversees finance across the holding and its operating companies, providing the financial foundation for the Group&rsquo;s expansion.</p></div></article></div>
   <h3 class="ld-group">Supervisory Board</h3>
-  <div class="ir-leaders-grid"><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-christian.png" alt="Christian Dreyer" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Chairman of the Supervisory Board</span><h3>Christian Dreyer</h3><p>Chairman of the Supervisory Board, bringing capital-market and governance experience to the oversight of Novogenia AG and the long-term interests of its shareholders.</p></div></article><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-florian.png" alt="Florian Renner" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Vice Chairman of the Supervisory Board</span><h3>Florian Renner</h3><p>Vice Chairman of the Supervisory Board, supporting the governance and strategic oversight of Novogenia AG alongside the Chairman and contributing capital-market expertise.</p></div></article><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-caroline.png" alt="Caroline Probst" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Member of the Supervisory Board</span><h3>Caroline Probst</h3><p>Member of the Supervisory Board, contributing to the independent oversight of the Group&rsquo;s management and the protection of shareholder interests.</p></div></article></div>
+  <div class="ir-leaders-grid"><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-christian.png" alt="Christian Dreyer" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Chairman of the Supervisory Board</span><h3>Christian Dreyer <span class="ld-title">Dipl.-Ing., MBA</span></h3><p>Chairman of the Supervisory Board, bringing capital-market and governance experience to the oversight of Novogenia AG and the long-term interests of its shareholders.</p></div></article><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-florian.png" alt="Florian Renner" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Vice Chairman of the Supervisory Board</span><h3>Florian Renner</h3><p>Vice Chairman of the Supervisory Board, supporting the governance and strategic oversight of Novogenia AG alongside the Chairman and contributing capital-market expertise.</p></div></article><article class="ir-leader"><div class="ld-photo"><img src="/investor-relations/img/staff-caroline.png" alt="Caroline Probst" loading="lazy"/></div><div class="ld-tx"><span class="ld-role">Member of the Supervisory Board</span><h3>Caroline Probst</h3><p>Member of the Supervisory Board, contributing to the independent oversight of the Group&rsquo;s management and the protection of shareholder interests.</p></div></article></div>
 </div>
 
   <div class="ir-sec-head" id="investor-relations-glance"><h2>Investor Relations at a glance</h2></div>
