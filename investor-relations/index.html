@@ -978,30 +978,38 @@ tr.cmp-extra{display:none!important}
 .cmp-note{font-size:12.5px;color:#7a7a7a;margin:14px 2px 0;line-height:1.5}
 .cmp-disc{font-size:11.5px;font-style:normal;color:#a9a9a9;margin:6px 2px 0}
 
-/* technologies as a vertical, expandable list */
-.ir-techlist{display:flex;flex-direction:column;gap:16px;margin:6px 0}
-.ir-techrow{background:#fff;border:1px solid #ece6ea;border-radius:16px;box-shadow:0 6px 22px rgba(45,8,28,.06);overflow:hidden;transition:box-shadow .2s,border-color .2s}
-.ir-techrow[open]{border-color:#e7cfe0;box-shadow:0 12px 30px rgba(45,8,28,.12)}
-.ir-techrow>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:20px 24px}
-.ir-techrow>summary::-webkit-details-marker{display:none}
-.tr-ico{flex:0 0 56px;width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center}
-.tr-ico svg{width:28px;height:28px;color:#fff}
-.tr-tx{display:flex;flex-direction:column;min-width:0;flex:1}
-.tr-title{font-size:20px;font-weight:800;color:#6E0147;line-height:1.25}
-.tr-lead{margin-top:4px;font-size:14px;line-height:1.55;color:#5e5e5e}
-.tr-chev{flex:0 0 auto;color:#a01a6e;display:flex;align-items:center;transition:transform .25s}
-.tr-chev svg{width:22px;height:22px}
-.ir-techrow[open] .tr-chev{transform:rotate(180deg)}
-.tr-body{padding:4px 24px 24px}
-.tr-body>p{margin:0 0 16px;font-size:15px;line-height:1.7;color:#454545}
-@media(max-width:640px){.ir-techrow>summary{padding:16px 16px;gap:14px}.tr-ico{flex-basis:48px;width:48px;height:48px}.tr-title{font-size:18px}.tr-body{padding:4px 16px 18px}}
-/* technology rows presented as one always-on element with embedded video */
-.ir-techrow--video{display:block}
-.ir-techrow--video .tr-head{display:flex;align-items:center;gap:18px;padding:20px 24px}
-.ir-techrow--video .tr-video{position:relative;width:100%;background:#0c0610;aspect-ratio:16/9;overflow:hidden}
-.ir-techrow--video .tr-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.ir-techrow--video .tr-body{padding:22px 24px 24px}
-@media(max-width:640px){.ir-techrow--video .tr-head{padding:16px 16px;gap:14px}.ir-techrow--video .tr-body{padding:16px 16px 18px}}
+/* technologies as alternating two-column feature rows */
+.ir-techlist{display:flex;flex-direction:column;gap:22px;margin:6px 0}
+.ir-techrow{position:relative;background:#fff;border:1px solid #ece6ea;border-radius:20px;box-shadow:0 6px 22px rgba(45,8,28,.06);overflow:hidden;transition:box-shadow .22s,border-color .22s,transform .22s}
+.ir-techrow:hover{border-color:#e7cfe0;box-shadow:0 18px 40px rgba(45,8,28,.14);transform:translateY(-3px)}
+.tr-split{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:stretch}
+/* zig-zag: even rows put the media on the right */
+.ir-techrow:nth-child(even) .tr-media{order:2}
+.tr-media{position:relative;min-height:300px;background:#0c0610;overflow:hidden}
+.tr-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tr-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(110,1,71,.22),transparent 55%);pointer-events:none}
+.tr-media--ph{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 120% at 20% 0%,#a01a6e 0%,#6E0147 48%,#3a0420 100%)}
+.tr-media--ph::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.10) 1.4px,transparent 1.6px);background-size:20px 20px;opacity:.5}
+.tr-media-ico{position:relative;z-index:1}
+.tr-media-ico svg{width:96px;height:96px;color:rgba(255,255,255,.92);filter:drop-shadow(0 8px 22px rgba(0,0,0,.3))}
+.tr-content{display:flex;flex-direction:column;justify-content:center;padding:32px 34px}
+.tr-head{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.tr-ico{flex:0 0 54px;width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(110,1,71,.24)}
+.tr-ico svg{width:27px;height:27px;color:#fff}
+.tr-title{font-size:22px;font-weight:800;color:#6E0147;line-height:1.2}
+.tr-lead{margin:0 0 14px;font-size:15.5px;font-weight:700;line-height:1.5;color:#a01a6e}
+.tr-copy>p{margin:0 0 12px;font-size:14.5px;line-height:1.72;color:#4a4a4a}
+.tr-copy>p:last-child{margin-bottom:0}
+/* the analysis spectrum spans the full width beneath its row */
+.tr-spectrum{padding:2px 34px 30px}
+.tr-spectrum .ir-spectrum{border-top:none;margin-top:0;padding-top:6px}
+@media(max-width:760px){
+  .tr-split{grid-template-columns:1fr}
+  .ir-techrow .tr-media{order:0!important;min-height:0;aspect-ratio:16/9}
+  .tr-content{padding:24px 20px}
+  .tr-title{font-size:20px}
+  .tr-spectrum{padding:2px 18px 22px}
+}
 /* large facility-tour video section (before Technologies) */
 .ir-factour{margin:64px 0 18px}
 .ir-factour-head{text-align:center;max-width:780px;margin:0 auto 26px}
@@ -1308,14 +1316,15 @@ tr.cmp-extra{display:none!important}
 
   <div class="ir-sec-head" id="technologies"><h2>Technologies</h2><a class="ir-more" href="/investor-relations/technologies/">All technologies &rarr;</a></div>
   <div class="ir-techlist"><section class="ir-techrow ir-techrow--video" data-spectrum="1">
-      <div class="tr-head">
-        <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c0 5 10 6 10 11s-10 6-10 10"/><path d="M17 3c0 5-10 6-10 11s10 6 10 10" opacity=".5"/><line x1="8.5" y1="6" x2="15.5" y2="6"/><line x1="9.5" y1="9" x2="14.5" y2="9"/><line x1="9.5" y1="15" x2="14.5" y2="15"/><line x1="8.5" y1="18" x2="15.5" y2="18"/></svg></span>
-        <span class="tr-tx"><span class="tr-title">Genetic Laboratory</span><span class="tr-lead">High-throughput analysis of the human genome and metabolome in our accredited laboratories.</span></span>
-      </div>
-      <div class="tr-video"><video src="/investor-relations/vid/lab.mp4" poster="/investor-relations/vid/lab-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia lab video"></video></div>
-      <div class="tr-body">
-        <p>Our accredited, high-throughput genetic and blood laboratory in Salzburg decodes the human genome and metabolome at scale. From a single sample we run DNA analysis alongside biochemical, virological and diagnostic testing under accredited quality systems &mdash; the analytical foundation for every personalized product and therapy in the Group.</p><p>The same facility scaled to become one of the leading SARS-CoV-2 PCR testing laboratories during the COVID-19 pandemic, proving the throughput and reliability of our platform under extreme demand. At the top of our range, Novogenia is the only laboratory in Austria licensed to perform genetic analysis on embryos (preimplantation genetic testing) &mdash; a uniquely regulated, high-end capability. Below, the full spectrum of analyses, from lifestyle DNA tests to high-end clinical applications.</p>
-        
+  <div class="tr-split">
+    <div class="tr-media"><video src="/investor-relations/vid/lab.mp4" poster="/investor-relations/vid/lab-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia lab video"></video></div>
+    <div class="tr-content">
+      <div class="tr-head"><span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c0 5 10 6 10 11s-10 6-10 10"/><path d="M17 3c0 5-10 6-10 11s10 6 10 10" opacity=".5"/><line x1="8.5" y1="6" x2="15.5" y2="6"/><line x1="9.5" y1="9" x2="14.5" y2="9"/><line x1="9.5" y1="15" x2="14.5" y2="15"/><line x1="8.5" y1="18" x2="15.5" y2="18"/></svg></span><span class="tr-title">Genetic Laboratory</span></div>
+      <p class="tr-lead">High-throughput analysis of the human genome and metabolome in our accredited laboratories.</p>
+      <div class="tr-copy"><p>Our accredited, high-throughput genetic and blood laboratory in Salzburg decodes the human genome and metabolome at scale. From a single sample we run DNA analysis alongside biochemical, virological and diagnostic testing under accredited quality systems &mdash; the analytical foundation for every personalized product and therapy in the Group.</p><p>The same facility scaled to become one of the leading SARS-CoV-2 PCR testing laboratories during the COVID-19 pandemic, proving the throughput and reliability of our platform under extreme demand. At the top of our range, Novogenia is the only laboratory in Austria licensed to perform genetic analysis on embryos (preimplantation genetic testing) &mdash; a uniquely regulated, high-end capability. Below, the full spectrum of analyses, from lifestyle DNA tests to high-end clinical applications.</p></div>
+    </div>
+  </div>
+  <div class="tr-spectrum">
 <section class="ir-spectrum">
   <div class="sp-head">
     <h4 class="sp-title">Our laboratories cover the entire spectrum of analytics &mdash; from lifestyle testing to highly regulated embryo diagnostics.</h4>
@@ -1356,39 +1365,38 @@ tr.cmp-extra{display:none!important}
   </div></div>
     <div class="sp-axis"><span class="sp-axis-l">Lifestyle</span><span class="sp-axis-line"></span><span class="sp-axis-r">High-End Medical</span></div>
   </div>
-</section>
-      </div>
-    </section><section class="ir-techrow ir-techrow--video">
-      <div class="tr-head">
-        <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span>
-        <span class="tr-tx"><span class="tr-title">Personalized Supplementation</span><span class="tr-lead">Supplements formulated for each customer from their own lab-analysis data.</span></span>
-      </div>
-      <div class="tr-video"><video src="/investor-relations/vid/supplements.mp4" poster="/investor-relations/vid/supplements-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia supplements video"></video></div>
-      <div class="tr-body">
-        <p>Each supplement is formulated individually from the customer&rsquo;s own genetic and lab-analysis data and produced in house &mdash; the right nutrients, in the right dose, matched to that person&rsquo;s biology. Rather than selling one-size-fits-all pills, we calculate each person&rsquo;s requirement for vitamins, minerals, amino acids and other micronutrients from their genetic profile and lifestyle, then manufacture a tailored daily formulation.</p><p>Production runs end to end under our own roof &mdash; from formulation and dosing to mixing, filling and packaging &mdash; so quality and personalization are controlled at every step. This closes the loop from analysis to a finished, personalized product, delivered as a convenient daily routine and reformulated whenever new analysis data becomes available.</p>
-        
-      </div>
-    </section><section class="ir-techrow ir-techrow--video">
-      <div class="tr-head">
-        <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20.5" y1="20.5" x2="15.5" y2="15.5"/><line x1="8" y1="11" x2="8" y2="13"/><line x1="11" y1="8.5" x2="11" y2="13"/><line x1="13" y1="10.5" x2="13" y2="13"/></svg></span>
-        <span class="tr-tx"><span class="tr-title">Personalized Cosmetics</span><span class="tr-lead">Cosmetics personalized from genetic and skin-analysis data.</span></span>
-      </div>
-      <div class="tr-video"><video src="/investor-relations/vid/cosmetics.mp4" poster="/investor-relations/vid/cosmetics-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia cosmetics video"></video></div>
-      <div class="tr-body">
-        <p>Skincare is personalized from genetic and skin-analysis data and manufactured in house, so each formulation targets the individual&rsquo;s specific skin biology rather than a one-size-fits-all product. Genetic markers for factors such as collagen breakdown, oxidative stress, moisture retention and skin sensitivity guide which active ingredients &mdash; and which concentrations &mdash; are blended into each customer&rsquo;s product.</p><p>Like our supplements, the cosmetics are produced on our own manufacturing lines, giving the Group another fully integrated, in-house value chain from analysis to finished, individualized formulation.</p>
-        
-      </div>
-    </section><details class="ir-techrow">
-  <summary>
-    <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="3.5" x2="9" y2="6.5"/><line x1="15" y1="3.5" x2="15" y2="6.5"/><line x1="9" y1="17.5" x2="9" y2="20.5"/><line x1="15" y1="17.5" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6.5" y2="9"/><line x1="3.5" y1="15" x2="6.5" y2="15"/><line x1="17.5" y1="9" x2="20.5" y2="9"/><line x1="17.5" y1="15" x2="20.5" y2="15"/></svg></span>
-    <span class="tr-tx"><span class="tr-title">Artificial Intelligence</span><span class="tr-lead">AI engines that interpret genetic data and millions of scientific publications.</span></span>
-    <span class="tr-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
-  </summary>
-  <div class="tr-body">
-    <p>Our AI engines interpret genetic data against millions of scientific publications, identifying the traits and relationships that turn raw lab data into actionable insight. The same models continuously improve our reports, detect inefficiencies in therapies, and power the &ldquo;analyse &rarr; product &rarr; re-analyse&rdquo; feedback loop at the heart of the Group.</p>
-    
+</section></div>
+</section><section class="ir-techrow ir-techrow--video">
+  <div class="tr-split">
+    <div class="tr-media"><video src="/investor-relations/vid/supplements.mp4" poster="/investor-relations/vid/supplements-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia supplements video"></video></div>
+    <div class="tr-content">
+      <div class="tr-head"><span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 9.5V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg></span><span class="tr-title">Personalized Supplementation</span></div>
+      <p class="tr-lead">Supplements formulated for each customer from their own lab-analysis data.</p>
+      <div class="tr-copy"><p>Each supplement is formulated individually from the customer&rsquo;s own genetic and lab-analysis data and produced in house &mdash; the right nutrients, in the right dose, matched to that person&rsquo;s biology. Rather than selling one-size-fits-all pills, we calculate each person&rsquo;s requirement for vitamins, minerals, amino acids and other micronutrients from their genetic profile and lifestyle, then manufacture a tailored daily formulation.</p><p>Production runs end to end under our own roof &mdash; from formulation and dosing to mixing, filling and packaging &mdash; so quality and personalization are controlled at every step. This closes the loop from analysis to a finished, personalized product, delivered as a convenient daily routine and reformulated whenever new analysis data becomes available.</p></div>
+    </div>
   </div>
-</details></div>
+  
+</section><section class="ir-techrow ir-techrow--video">
+  <div class="tr-split">
+    <div class="tr-media"><video src="/investor-relations/vid/cosmetics.mp4" poster="/investor-relations/vid/cosmetics-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Novogenia cosmetics video"></video></div>
+    <div class="tr-content">
+      <div class="tr-head"><span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20.5" y1="20.5" x2="15.5" y2="15.5"/><line x1="8" y1="11" x2="8" y2="13"/><line x1="11" y1="8.5" x2="11" y2="13"/><line x1="13" y1="10.5" x2="13" y2="13"/></svg></span><span class="tr-title">Personalized Cosmetics</span></div>
+      <p class="tr-lead">Cosmetics personalized from genetic and skin-analysis data.</p>
+      <div class="tr-copy"><p>Skincare is personalized from genetic and skin-analysis data and manufactured in house, so each formulation targets the individual&rsquo;s specific skin biology rather than a one-size-fits-all product. Genetic markers for factors such as collagen breakdown, oxidative stress, moisture retention and skin sensitivity guide which active ingredients &mdash; and which concentrations &mdash; are blended into each customer&rsquo;s product.</p><p>Like our supplements, the cosmetics are produced on our own manufacturing lines, giving the Group another fully integrated, in-house value chain from analysis to finished, individualized formulation.</p></div>
+    </div>
+  </div>
+  
+</section><section class="ir-techrow ir-techrow--video">
+  <div class="tr-split">
+    <div class="tr-media tr-media--ph"><span class="tr-media-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="3.5" x2="9" y2="6.5"/><line x1="15" y1="3.5" x2="15" y2="6.5"/><line x1="9" y1="17.5" x2="9" y2="20.5"/><line x1="15" y1="17.5" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6.5" y2="9"/><line x1="3.5" y1="15" x2="6.5" y2="15"/><line x1="17.5" y1="9" x2="20.5" y2="9"/><line x1="17.5" y1="15" x2="20.5" y2="15"/></svg></span></div>
+    <div class="tr-content">
+      <div class="tr-head"><span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><line x1="9" y1="3.5" x2="9" y2="6.5"/><line x1="15" y1="3.5" x2="15" y2="6.5"/><line x1="9" y1="17.5" x2="9" y2="20.5"/><line x1="15" y1="17.5" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6.5" y2="9"/><line x1="3.5" y1="15" x2="6.5" y2="15"/><line x1="17.5" y1="9" x2="20.5" y2="9"/><line x1="17.5" y1="15" x2="20.5" y2="15"/></svg></span><span class="tr-title">Artificial Intelligence</span></div>
+      <p class="tr-lead">AI engines that interpret genetic data and millions of scientific publications.</p>
+      <div class="tr-copy"><p>Our AI engines interpret genetic data against millions of scientific publications, identifying the traits and relationships that turn raw lab data into actionable insight. The same models continuously improve our reports, detect inefficiencies in therapies, and power the &ldquo;analyse &rarr; product &rarr; re-analyse&rdquo; feedback loop at the heart of the Group.</p></div>
+    </div>
+  </div>
+  
+</section></div>
 
   
 <div class="ir-sec-head"><h2>Media</h2><p>Films from the Novogenia Academy &mdash; the science behind our analyses and products.</p></div>

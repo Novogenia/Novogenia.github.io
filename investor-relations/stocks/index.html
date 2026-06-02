@@ -978,30 +978,38 @@ tr.cmp-extra{display:none!important}
 .cmp-note{font-size:12.5px;color:#7a7a7a;margin:14px 2px 0;line-height:1.5}
 .cmp-disc{font-size:11.5px;font-style:normal;color:#a9a9a9;margin:6px 2px 0}
 
-/* technologies as a vertical, expandable list */
-.ir-techlist{display:flex;flex-direction:column;gap:16px;margin:6px 0}
-.ir-techrow{background:#fff;border:1px solid #ece6ea;border-radius:16px;box-shadow:0 6px 22px rgba(45,8,28,.06);overflow:hidden;transition:box-shadow .2s,border-color .2s}
-.ir-techrow[open]{border-color:#e7cfe0;box-shadow:0 12px 30px rgba(45,8,28,.12)}
-.ir-techrow>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:20px 24px}
-.ir-techrow>summary::-webkit-details-marker{display:none}
-.tr-ico{flex:0 0 56px;width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center}
-.tr-ico svg{width:28px;height:28px;color:#fff}
-.tr-tx{display:flex;flex-direction:column;min-width:0;flex:1}
-.tr-title{font-size:20px;font-weight:800;color:#6E0147;line-height:1.25}
-.tr-lead{margin-top:4px;font-size:14px;line-height:1.55;color:#5e5e5e}
-.tr-chev{flex:0 0 auto;color:#a01a6e;display:flex;align-items:center;transition:transform .25s}
-.tr-chev svg{width:22px;height:22px}
-.ir-techrow[open] .tr-chev{transform:rotate(180deg)}
-.tr-body{padding:4px 24px 24px}
-.tr-body>p{margin:0 0 16px;font-size:15px;line-height:1.7;color:#454545}
-@media(max-width:640px){.ir-techrow>summary{padding:16px 16px;gap:14px}.tr-ico{flex-basis:48px;width:48px;height:48px}.tr-title{font-size:18px}.tr-body{padding:4px 16px 18px}}
-/* technology rows presented as one always-on element with embedded video */
-.ir-techrow--video{display:block}
-.ir-techrow--video .tr-head{display:flex;align-items:center;gap:18px;padding:20px 24px}
-.ir-techrow--video .tr-video{position:relative;width:100%;background:#0c0610;aspect-ratio:16/9;overflow:hidden}
-.ir-techrow--video .tr-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.ir-techrow--video .tr-body{padding:22px 24px 24px}
-@media(max-width:640px){.ir-techrow--video .tr-head{padding:16px 16px;gap:14px}.ir-techrow--video .tr-body{padding:16px 16px 18px}}
+/* technologies as alternating two-column feature rows */
+.ir-techlist{display:flex;flex-direction:column;gap:22px;margin:6px 0}
+.ir-techrow{position:relative;background:#fff;border:1px solid #ece6ea;border-radius:20px;box-shadow:0 6px 22px rgba(45,8,28,.06);overflow:hidden;transition:box-shadow .22s,border-color .22s,transform .22s}
+.ir-techrow:hover{border-color:#e7cfe0;box-shadow:0 18px 40px rgba(45,8,28,.14);transform:translateY(-3px)}
+.tr-split{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:stretch}
+/* zig-zag: even rows put the media on the right */
+.ir-techrow:nth-child(even) .tr-media{order:2}
+.tr-media{position:relative;min-height:300px;background:#0c0610;overflow:hidden}
+.tr-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tr-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(110,1,71,.22),transparent 55%);pointer-events:none}
+.tr-media--ph{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 120% at 20% 0%,#a01a6e 0%,#6E0147 48%,#3a0420 100%)}
+.tr-media--ph::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.10) 1.4px,transparent 1.6px);background-size:20px 20px;opacity:.5}
+.tr-media-ico{position:relative;z-index:1}
+.tr-media-ico svg{width:96px;height:96px;color:rgba(255,255,255,.92);filter:drop-shadow(0 8px 22px rgba(0,0,0,.3))}
+.tr-content{display:flex;flex-direction:column;justify-content:center;padding:32px 34px}
+.tr-head{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.tr-ico{flex:0 0 54px;width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(110,1,71,.24)}
+.tr-ico svg{width:27px;height:27px;color:#fff}
+.tr-title{font-size:22px;font-weight:800;color:#6E0147;line-height:1.2}
+.tr-lead{margin:0 0 14px;font-size:15.5px;font-weight:700;line-height:1.5;color:#a01a6e}
+.tr-copy>p{margin:0 0 12px;font-size:14.5px;line-height:1.72;color:#4a4a4a}
+.tr-copy>p:last-child{margin-bottom:0}
+/* the analysis spectrum spans the full width beneath its row */
+.tr-spectrum{padding:2px 34px 30px}
+.tr-spectrum .ir-spectrum{border-top:none;margin-top:0;padding-top:6px}
+@media(max-width:760px){
+  .tr-split{grid-template-columns:1fr}
+  .ir-techrow .tr-media{order:0!important;min-height:0;aspect-ratio:16/9}
+  .tr-content{padding:24px 20px}
+  .tr-title{font-size:20px}
+  .tr-spectrum{padding:2px 18px 22px}
+}
 /* large facility-tour video section (before Technologies) */
 .ir-factour{margin:64px 0 18px}
 .ir-factour-head{text-align:center;max-width:780px;margin:0 auto 26px}
