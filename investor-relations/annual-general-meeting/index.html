@@ -593,27 +593,26 @@ a {
 .ir-rcard .rdl .sub{font-size:12px;color:#969696;font-weight:600}
 .ir-rcard .rdl .cta{flex:none;background:#6E0147;color:#fff;font-weight:700;font-size:13px;padding:9px 18px;border-radius:32px}
 .ir-rcard .rmeta{font-size:12px;color:#8a8a8a;font-weight:600;margin:0;padding:0 22px 16px}
-/* ---- analyst price-target element (main page + research consensus) ---- */
-.ir-analysts{background:#fff;border:1px solid #ece6ea;border-radius:18px;box-shadow:0 8px 26px rgba(45,8,28,.07);padding:22px 24px 20px;margin:14px 0 8px}
-.an-head{margin:0 0 16px}
-.an-tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:#fff;background:linear-gradient(135deg,#6E0147,#a01a6e);border-radius:30px;padding:5px 13px}
-.an-head h3{margin:10px 0 0;font-size:19px;font-weight:800;color:#3a0420}
-.an-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 16px}
-.an-stat{background:#faf6f9;border:1px solid #efe4ec;border-radius:14px;padding:15px 17px;display:flex;flex-direction:column;justify-content:center}
-.an-stat--lead{background:linear-gradient(160deg,#6E0147,#4a0430);border-color:#4a0430}
-.an-stat .an-k{font-size:11px;text-transform:uppercase;letter-spacing:.7px;font-weight:700;color:#969696}
-.an-stat--lead .an-k{color:rgba(255,255,255,.72)}
-.an-stat .an-v{font-size:30px;font-weight:800;color:#6E0147;line-height:1.05;margin-top:3px}
-.an-stat--lead .an-v{color:#fff}
-.an-stat .an-s{font-size:12px;color:#8a8a8a;font-weight:600;margin-top:4px}
-.an-stat--lead .an-s{color:rgba(255,255,255,.7)}
-.an-broker{display:flex;align-items:center;gap:12px;background:#faf6f9;border:1px solid #efe4ec;border-radius:14px;padding:13px 16px}
-.an-bname{font-size:14.5px;font-weight:800;color:#333}
-.an-breco{margin-left:auto}
-.an-btarget{font-size:20px;font-weight:800;color:#6E0147;min-width:74px;text-align:right}
-.ir-analysts .ir-btn.ghost{margin-top:2px}
-.an-note{font-size:11.5px;color:#a9a9a9;font-style:normal;margin:12px 0 0;line-height:1.5}
-@media(max-width:560px){.an-grid{grid-template-columns:1fr}}
+/* ---- analyst price targets: two side-by-side broker columns ---- */
+.ir-analysts{margin:14px 0 8px}
+.an-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.an-col{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid #ece6ea;border-radius:18px;box-shadow:0 8px 26px rgba(45,8,28,.07);padding:30px 26px 22px}
+.an-col-logo{display:flex;align-items:center;justify-content:center;height:64px;margin-bottom:18px}
+.an-wm{font-size:27px;font-weight:800;letter-spacing:.5px;line-height:1}
+.an-wm--oddo{color:#0a1b3f}
+.an-wm--gbc{color:#1a1a1a}
+.an-wm--gbc b{color:#b4923c}
+.an-reco{font-size:12px}
+.an-plabel{margin-top:18px;font-size:11px;text-transform:uppercase;letter-spacing:.9px;font-weight:700;color:#9a9a9a}
+.an-price{font-size:42px;font-weight:800;color:#6E0147;line-height:1;margin-top:6px}
+.an-pdf{display:flex;align-items:center;gap:13px;width:100%;margin-top:22px;padding:12px 14px;border:1px solid #efe4ec;border-radius:12px;background:#faf6f9;text-decoration:none;transition:.15s}
+.an-pdf:hover{background:#f3e8f0;border-color:#e3c9da}
+.an-pdf-tx{flex:1;min-width:0;text-align:left}
+.an-pdf-nm{display:block;font-weight:700;font-size:13.5px;color:#333;line-height:1.3}
+.an-pdf-sub{display:block;font-size:11.5px;color:#969696;font-weight:600;margin-top:1px}
+.an-pdf-cta{flex:none;background:#6E0147;color:#fff;font-weight:700;font-size:12.5px;padding:8px 15px;border-radius:30px}
+.an-note{font-size:11.5px;color:#a9a9a9;font-style:normal;margin:16px 2px 0;line-height:1.5;text-align:center}
+@media(max-width:620px){.an-cols{grid-template-columns:1fr}}
 /* ---- shareholder structure bars ---- */
 .ir-shares{display:flex;flex-direction:column;gap:14px;margin:16px 0 10px;max-width:640px}
 .shr-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
@@ -771,13 +770,18 @@ html{scroll-behavior:smooth}
 @media(max-width:560px){.hl-grid{grid-template-columns:1fr}}
 
 /* laboratory analysis spectrum (visual) */
-.ir-spectrum{position:relative;margin:40px 0 6px;padding:26px 0 4px;border-top:1px solid #efe3eb}
-.sp-head{margin:0 0 26px}
-/* force a strong, standout heading (the WP theme otherwise renders this h4 faint/grey) */
-.ir-page .sp-title{margin:0 0 14px!important;color:#6E0147!important;font-size:clamp(21px,2.4vw,27px)!important;font-weight:800!important;line-height:1.28!important;text-transform:none!important;letter-spacing:normal!important}
-.sp-note{display:flex;align-items:flex-start;gap:10px;margin:0;padding:12px 16px;background:#fbf3f8;border:1px solid #e7cfe0;border-left:4px solid #6E0147;border-radius:10px;font-size:14px;line-height:1.55;color:#4a4a4a}
-.sp-note svg{flex:0 0 20px;width:20px;height:20px;color:#6E0147;margin-top:1px}
-.sp-note strong{color:#6E0147}
+.ir-spectrum{position:relative;margin:60px 0 6px;padding:30px 0 4px;border-top:1px solid #efe3eb}
+/* force a strong, standout heading (the WP theme otherwise renders this faint/grey) */
+.ir-page .sp-title{margin:0 0 30px!important;color:#6E0147!important;font-size:clamp(21px,2.4vw,28px)!important;font-weight:800!important;line-height:1.28!important;text-transform:none!important;letter-spacing:normal!important}
+/* "only ones" statement as a premium gold-accented banner below the visualization */
+.sp-unique{display:flex;align-items:center;gap:20px;margin-top:32px;padding:22px 28px;border-radius:18px;background:linear-gradient(135deg,#6E0147,#a01a6e);color:#fff;box-shadow:0 16px 38px rgba(110,1,71,.28)}
+.sp-unique-ico{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25)}
+.sp-unique-ico svg{width:30px;height:30px;color:#fff}
+.sp-unique-tx{display:flex;flex-direction:column;gap:6px}
+.sp-unique-k{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;color:#f3d2e6}
+.sp-unique-d{font-size:15.5px;line-height:1.55;color:#fdeef6}
+.sp-unique-d strong{color:#fff;font-weight:800;box-shadow:inset 0 -2px 0 #C9960C}
+@media(max-width:600px){.sp-unique{flex-direction:column;text-align:center;align-items:center;padding:22px 20px}}
 .sp-plot{position:relative}
 .sp-track{position:absolute;left:6%;right:6%;top:118px;height:6px;border-radius:6px;background:linear-gradient(90deg,#6E0147,#a01a6e 28%,#C9960C 60%,#1b6fb3);z-index:0;box-shadow:0 4px 14px rgba(110,1,71,.25)}
 .sp-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
@@ -988,37 +992,29 @@ tr.cmp-extra{display:none!important}
 .cmp-note{font-size:12.5px;color:#7a7a7a;margin:14px 2px 0;line-height:1.5}
 .cmp-disc{font-size:11.5px;font-style:normal;color:#a9a9a9;margin:6px 2px 0}
 
-/* technologies as alternating two-column feature rows */
-.ir-techlist{display:flex;flex-direction:column;gap:22px;margin:6px 0}
+/* technologies: stacked cards — title above, 16:9 video, explanation below */
+.ir-techlist{display:flex;flex-direction:column;gap:30px;margin:6px 0}
 .ir-techrow{position:relative;background:#fff;border:1px solid #ece6ea;border-radius:20px;box-shadow:0 6px 22px rgba(45,8,28,.06);overflow:hidden;transition:box-shadow .22s,border-color .22s,transform .22s}
 .ir-techrow:hover{border-color:#e7cfe0;box-shadow:0 18px 40px rgba(45,8,28,.14);transform:translateY(-3px)}
-.tr-split{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:stretch}
-/* zig-zag: even rows put the media on the right */
-.ir-techrow:nth-child(even) .tr-media{order:2}
-.tr-media{position:relative;min-height:300px;background:#0c0610;overflow:hidden}
+.ir-techrow .tr-head{display:flex;align-items:center;gap:16px;padding:24px 32px 18px}
+.tr-ico{flex:0 0 54px;width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(110,1,71,.24)}
+.tr-ico svg{width:27px;height:27px;color:#fff}
+.tr-title{font-size:23px;font-weight:800;color:#6E0147;line-height:1.2}
+/* 16:9 video band */
+.tr-media{position:relative;aspect-ratio:16/9;background:#0c0610;overflow:hidden}
 .tr-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.tr-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(110,1,71,.22),transparent 55%);pointer-events:none}
 .tr-media--ph{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 120% at 20% 0%,#a01a6e 0%,#6E0147 48%,#3a0420 100%)}
 .tr-media--ph::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.10) 1.4px,transparent 1.6px);background-size:20px 20px;opacity:.5}
 .tr-media-ico{position:relative;z-index:1}
 .tr-media-ico svg{width:96px;height:96px;color:rgba(255,255,255,.92);filter:drop-shadow(0 8px 22px rgba(0,0,0,.3))}
-.tr-content{display:flex;flex-direction:column;justify-content:center;padding:32px 34px}
-.tr-head{display:flex;align-items:center;gap:16px;margin-bottom:14px}
-.tr-ico{flex:0 0 54px;width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,#6E0147,#a01a6e);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(110,1,71,.24)}
-.tr-ico svg{width:27px;height:27px;color:#fff}
-.tr-title{font-size:22px;font-weight:800;color:#6E0147;line-height:1.2}
-.tr-lead{margin:0 0 14px;font-size:15.5px;font-weight:700;line-height:1.5;color:#a01a6e}
+.tr-content{padding:22px 32px 28px}
+.tr-lead{margin:0 0 14px;font-size:16px;font-weight:700;line-height:1.5;color:#a01a6e}
 .tr-copy>p{margin:0 0 12px;font-size:14.5px;line-height:1.72;color:#4a4a4a}
 .tr-copy>p:last-child{margin-bottom:0}
-/* the analysis spectrum spans the full width beneath its row */
-.tr-spectrum{padding:2px 34px 30px}
-.tr-spectrum .ir-spectrum{border-top:none;margin-top:0;padding-top:6px}
 @media(max-width:760px){
-  .tr-split{grid-template-columns:1fr}
-  .ir-techrow .tr-media{order:0!important;min-height:0;aspect-ratio:16/9}
-  .tr-content{padding:24px 20px}
+  .ir-techrow .tr-head{padding:20px 20px 14px}
   .tr-title{font-size:20px}
-  .tr-spectrum{padding:2px 18px 22px}
+  .tr-content{padding:18px 20px 24px}
 }
 /* large facility-tour video section (before Technologies) */
 .ir-factour{margin:64px 0 18px}
