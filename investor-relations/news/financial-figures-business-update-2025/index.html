@@ -688,13 +688,15 @@ html{scroll-behavior:smooth}
 .segb-chart{display:flex;flex-direction:column;justify-content:center;min-width:0;background:rgba(255,255,255,.96);border-radius:16px;padding:18px 20px;box-shadow:0 12px 30px rgba(0,0,0,.2)}
 .ir-coblock{background:#fff;border:1px solid rgba(255,255,255,.55);border-radius:14px;overflow:hidden;transition:box-shadow .15s}
 .ir-coblock[open]{box-shadow:0 10px 26px rgba(0,0,0,.22)}
-.ir-coblock summary{display:flex;align-items:center;gap:20px;padding:14px 16px;cursor:pointer;list-style:none}
+.ir-coblock summary{display:flex;align-items:center;gap:18px;padding:9px 16px;cursor:pointer;list-style:none}
 .ir-coblock summary::-webkit-details-marker{display:none}
-/* logos: no boxes, twice as large; dark backdrop kept only for white logos that need contrast */
-.cob-logo{display:flex;align-items:center;justify-content:center;width:120px;height:120px;flex:0 0 120px;overflow:hidden}
-.cob-logo--dark{background:#2a2a32;border-radius:12px;padding:10px}
+/* logos: wide but short so the boxes stay compact (~60% of the old height); most
+   logos carry a lot of vertical whitespace, so we cap the height and let them
+   fill the width instead of driving the row taller */
+.cob-logo{display:flex;align-items:center;justify-content:center;width:128px;height:66px;flex:0 0 128px;overflow:hidden}
+.cob-logo--dark{background:#2a2a32;border-radius:10px;padding:7px 9px}
 .cob-logo img{max-width:100%;max-height:100%;object-fit:contain}
-.cob-mono{display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:12px;background:linear-gradient(135deg,#6E0147,#a01a6e);color:#fff;font-weight:700;font-size:30px}
+.cob-mono{display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:11px;background:linear-gradient(135deg,#6E0147,#a01a6e);color:#fff;font-weight:700;font-size:25px}
 .cob-tx{display:flex;flex-direction:column;flex:1;min-width:0;margin-left:10px}
 .cob-name{color:#2a0418;font-size:16px;font-weight:800;line-height:1.2}
 .cob-role{margin-top:3px;color:#6E0147;font-size:13px;font-weight:600}
@@ -922,8 +924,15 @@ html{scroll-behavior:smooth}
 .org-pct--full{background:#6E0147;color:#fff}
 .org-pct--maj{background:#f3e7ef;color:#6E0147}
 .org-pct--min{background:#eeeeee;color:#666}
-.org-sub{margin:1px 0 1px 18px;padding:10px;border-left:2px solid #e2b8d2;background:#fff;border-radius:0 12px 12px 0;display:flex;flex-direction:column;gap:8px}
-.org-sub-lab{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#a0246e}
+/* sub-holding shown as a clearly bracketed parent -> children group */
+.org-group{background:#fbf5f9;border:1px solid #ecd5e4;border-radius:13px;padding:8px}
+.org-node--group{background:linear-gradient(135deg,#fbeef6,#f6e2ee);border-color:#e3bcd6}
+.org-node--group .on-name{color:#6E0147}
+.org-children{position:relative;margin:8px 0 2px 30px;display:flex;flex-direction:column;gap:8px}
+.org-children::before{content:"";position:absolute;left:-16px;top:-10px;height:calc(100% - 20px);width:2px;background:#d9b3cb}
+.org-children-lab{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:#a0246e;margin:0 0 1px 2px}
+.org-children .org-node--child{position:relative}
+.org-children .org-node--child::before{content:"";position:absolute;left:-16px;top:50%;width:16px;height:2px;background:#d9b3cb}
 .org-legend{display:flex;flex-wrap:wrap;gap:9px 18px;justify-content:center;align-items:center;margin:18px auto 0;max-width:900px;padding:13px 18px;background:#faf7f9;border:1px solid #ece6ea;border-radius:12px}
 .org-leg{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#555}
 .org-leg b{font-weight:800;color:#2d081c}
