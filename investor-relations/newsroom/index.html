@@ -677,14 +677,11 @@ a {
 @media(max-width:560px){.ir-stats{grid-template-columns:1fr 1fr}.ir-downloads .cta{padding:8px 14px}}
 /* ---- landing: section headers ---- */
 html{scroll-behavior:smooth}
-.ir-sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px;margin:58px 0 10px;scroll-margin-top:24px}
-.ir-sec-head h2{margin:0;color:#6E0147;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.2}
-.ir-sec-head p{flex:1 0 100%;order:3;margin:8px 0 0;color:#6b6b6b;font-size:15px;line-height:1.55;max-width:70ch;text-align:left}
-/* heads that carry a grey description -> centred block, bigger title, grey text directly under it */
-.ir-sec-head:has(p){flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0;margin-bottom:14px}
-.ir-sec-head:has(p) h2{font-size:clamp(28px,3.3vw,40px)}
-.ir-sec-head:has(p) p{flex:0 0 auto;order:2;margin:11px auto 0;max-width:66ch;text-align:center}
-.ir-more{flex:none;font-size:14px;font-weight:700;color:#6E0147;text-decoration:none!important;white-space:nowrap}
+/* every section heading: centred + large, with the description and the "more" link centred under it */
+.ir-sec-head{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0;margin:58px 0 16px;scroll-margin-top:24px}
+.ir-sec-head h2{order:1;margin:0;color:#6E0147;font-size:clamp(28px,3.3vw,40px);font-weight:800;line-height:1.18}
+.ir-sec-head p{order:2;margin:11px auto 0;color:#6b6b6b;font-size:15px;line-height:1.55;max-width:66ch;text-align:center}
+.ir-more{order:3;margin:12px auto 0;font-size:14px;font-weight:700;color:#6E0147;text-decoration:none!important;white-space:nowrap}
 .ir-more:hover{color:#a01a6e}
 .ir-page .ir-sec-head + .ir-cards,.ir-page .ir-sec-head + .ir-quote,.ir-page .ir-sec-head + .ir-mission,.ir-page .ir-sec-head + .ir-news,.ir-page .ir-sec-head + .ir-brandgrid,.ir-page .ir-sec-head + .ir-pillars,.ir-page .ir-sec-head + .ir-ceo{margin-top:18px}
 /* ---- mission cards ---- */
