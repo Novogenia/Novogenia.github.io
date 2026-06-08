@@ -984,11 +984,13 @@ html{scroll-behavior:smooth}
 .org-group{background:#fbf5f9;border:1px solid #ecd5e4;border-radius:13px;padding:8px}
 .org-node--group{background:linear-gradient(135deg,#fbeef6,#f6e2ee);border-color:#e3bcd6}
 .org-node--group .on-name{color:#6E0147}
-.org-children{position:relative;margin:8px 0 2px 30px;display:flex;flex-direction:column;gap:8px}
-.org-children::before{content:"";position:absolute;left:-16px;top:-10px;height:calc(100% - 20px);width:2px;background:#d9b3cb}
-.org-children-lab{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:#a0246e;margin:0 0 1px 2px}
-.org-children .org-node--child{position:relative}
-.org-children .org-node--child::before{content:"";position:absolute;left:-16px;top:50%;width:16px;height:2px;background:#d9b3cb}
+.org-children{margin:6px 0 2px 34px}
+.org-children-lab{display:block;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:#a0246e;margin:0 0 8px 2px}
+/* tree connectors: a vertical spine joining each child's centre to its sibling, with a horizontal tick into each card */
+.org-children-list{position:relative;display:flex;flex-direction:column;gap:8px}
+.org-children-list::before{content:"";position:absolute;left:-19px;top:30px;bottom:30px;width:2.5px;border-radius:2px;background:#b3578f}
+.org-children-list .org-node--child{position:relative}
+.org-children-list .org-node--child::before{content:"";position:absolute;left:-19px;top:50%;transform:translateY(-50%);width:19px;height:2.5px;border-radius:2px;background:#b3578f}
 .org-legend{display:flex;flex-wrap:wrap;gap:9px 18px;justify-content:center;align-items:center;margin:18px auto 0;max-width:900px;padding:13px 18px;background:#faf7f9;border:1px solid #ece6ea;border-radius:12px}
 .org-leg{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#555}
 .org-leg b{font-weight:800;color:#2d081c}
@@ -1076,6 +1078,22 @@ tr.cmp-extra{display:none!important}
 .ir-factour-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#0c0610;box-shadow:0 34px 80px rgba(110,1,71,.24)}
 .ir-factour-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media(max-width:640px){.ir-factour{margin:44px 0 14px}.ir-factour-frame{border-radius:16px}}
+/* technology highlight bullets (marketing punch above the explanatory copy) */
+.tr-highlights{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-direction:column;gap:10px}
+.tr-highlights li{display:flex;align-items:flex-start;gap:11px;font-size:15px;line-height:1.5;color:#2d081c;font-weight:600}
+.tr-hl-ico{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:7px;background:linear-gradient(135deg,#6E0147,#a01a6e);margin-top:1px}
+.tr-hl-ico svg{width:14px;height:14px;color:#fff;stroke-width:3}
+/* analysis spectrum nested inside the Genetic Laboratory row */
+.tr-spectrum .ir-spectrum{margin:26px 0 0;padding:26px 0 2px;border-top:1px solid #ece6ea}
+/* lazy YouTube embed: poster + play button; iframe injected on click */
+.ir-ytlazy{position:absolute;inset:0;width:100%;height:100%;cursor:pointer;background:#0c0610}
+.ir-ytlazy .ytlazy-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ir-ytlazy iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ytlazy-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:54px;padding:0;border:0;background:none;cursor:pointer;transition:transform .16s ease-out}
+.ytlazy-play svg{width:100%;height:100%;display:block;filter:drop-shadow(0 6px 16px rgba(0,0,0,.45))}
+.ytlazy-play .yt-bg{fill:#212121;fill-opacity:.85;transition:fill .16s,fill-opacity .16s}
+.ir-ytlazy:hover .ytlazy-play{transform:translate(-50%,-50%) scale(1.08)}
+.ir-ytlazy:hover .ytlazy-play .yt-bg{fill:#f00;fill-opacity:1}
 
 /* new building expansion */
 .ir-build{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#fff;border:1px solid #ece6ea;border-radius:18px;overflow:hidden;margin:22px 0 6px;box-shadow:0 8px 26px rgba(45,8,28,.07)}
