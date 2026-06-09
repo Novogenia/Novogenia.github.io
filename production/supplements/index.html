@@ -1161,10 +1161,10 @@ tr.cmp-extra{display:none!important}
 .sx-hero h1 .g{color:#f3d075}
 .sx-lead{font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.62;color:#fbeef6;max-width:48ch}
 .sx-hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
-.sx-btn{display:inline-flex;align-items:center;gap:9px;font-family:inherit;font-size:.96rem;font-weight:800;border-radius:32px;padding:13px 25px;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .14s cubic-bezier(.16,1,.3,1),box-shadow .18s,background .18s,color .18s}
-.sx-btn-gold{background:linear-gradient(135deg,#f3d075,#C9960C);color:#34061f;box-shadow:0 12px 26px rgba(201,150,12,.32)}
+.sx-btn{display:inline-flex;align-items:center;gap:9px;font-family:inherit;font-size:.96rem;font-weight:800;border-radius:32px;padding:13px 25px;text-decoration:none!important;cursor:pointer;border:2px solid transparent;transition:transform .14s cubic-bezier(.16,1,.3,1),box-shadow .18s,background .18s,color .18s}
+.sx-btn-gold{background:linear-gradient(135deg,#f3d075,#C9960C);color:#34061f!important;box-shadow:0 12px 26px rgba(201,150,12,.32)}
 .sx-btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(201,150,12,.42)}
-.sx-btn-ghost{background:rgba(255,255,255,.07);color:#fff;border-color:rgba(255,255,255,.42)}
+.sx-btn-ghost{background:rgba(255,255,255,.16);color:#fff!important;border-color:rgba(255,255,255,.66)}
 .sx-btn-ghost:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
 .sx-btn:active{transform:translateY(1px) scale(.99)}
 .sx-trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
@@ -1188,7 +1188,7 @@ tr.cmp-extra{display:none!important}
 .sx-benlist h3{font-size:1.18rem;font-weight:800;margin:0 0 5px}
 .sx-benlist p{margin:0;font-size:.98rem;color:var(--muted);line-height:1.58;max-width:54ch}
 /* ---------- release formats ---------- */
-.sx-fmts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.sx-fmts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:760px;margin:0 auto}
 .sx-fmt{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 24px 26px;box-shadow:0 14px 34px rgba(52,6,31,.07);transition:transform .18s cubic-bezier(.16,1,.3,1),box-shadow .18s}
 .sx-fmt:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(52,6,31,.15)}
 .sx-cv-wrap{height:72px;margin-bottom:18px}
@@ -1324,9 +1324,8 @@ table.sx-cmp .sx-col{background:var(--surface)}
   <p>Some nutrients need to arrive fast and early, others slowly across the day. Each one is assigned the profile that suits it.</p>
 </div>
 <div class="sx-fmts">
-  <article class="sx-fmt" data-rv><div class="sx-cv-wrap sx-curve" data-rv><svg class="sx-cv" viewBox="0 0 130 62" preserveAspectRatio="none" aria-hidden="true"><line x1="8" y1="54" x2="124" y2="54" stroke="#e6d6e1" stroke-width="1"/><path d="M8,54 C18,54 20,12 36,10 L122,8 L122,54 Z" fill="url(#sxgFast)"/><path class="ln" pathLength="100" d="M8,54 C18,54 20,12 36,10 L122,8" fill="none" stroke="#6E0147" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="sx-fmt-tag">Fast</span><h3>Fast-release</h3><p>About 70 percent of the dose is released within ten minutes, while the meal is still being digested.</p><div class="sx-chips"><span>Vitamin A</span><span>Vitamin D</span><span>Vitamin E</span><span>Vitamin K</span></div></article>
-  <article class="sx-fmt" data-rv><div class="sx-cv-wrap sx-curve" data-rv><svg class="sx-cv" viewBox="0 0 130 62" preserveAspectRatio="none" aria-hidden="true"><line x1="8" y1="54" x2="124" y2="54" stroke="#e6d6e1" stroke-width="1"/><path d="M8,54 C44,50 64,42 122,12 L122,54 Z" fill="url(#sxgSlow)"/><path class="ln" pathLength="100" d="M8,54 C44,50 64,42 122,12" fill="none" stroke="#C9960C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="sx-fmt-tag">Slow</span><h3>Slow-release</h3><p>A gradual release over roughly three hours, keeping the nutrient available for up to seven.</p><div class="sx-chips"><span>Vitamin C</span><span>B vitamins</span></div><a class="sx-fmt-link" href="#study">See the vitamin&nbsp;C release study &darr;</a></article>
-  <article class="sx-fmt" data-rv><div class="sx-cv-wrap sx-curve" data-rv><svg class="sx-cv" viewBox="0 0 130 62" preserveAspectRatio="none" aria-hidden="true"><line x1="8" y1="54" x2="124" y2="54" stroke="#e6d6e1" stroke-width="1"/><path d="M8,54 C20,26 34,19 60,17 C86,15 104,11 122,9 L122,54 Z" fill="url(#sxgMix)"/><path class="ln" pathLength="100" d="M8,54 C20,26 34,19 60,17 C86,15 104,11 122,9" fill="none" stroke="#34061f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="sx-fmt-tag">50 : 50</span><h3>Continuous</h3><p>Fast and slow beads combined for steady availability, the way nutrients arrive from a slowly digested meal.</p><div class="sx-chips"><span>Everyday blends</span></div></article>
+  <article class="sx-fmt" data-rv><div class="sx-cv-wrap sx-curve" data-rv><svg class="sx-cv" viewBox="0 0 130 62" preserveAspectRatio="none" aria-hidden="true"><line x1="8" y1="54" x2="124" y2="54" stroke="#e6d6e1" stroke-width="1"/><path d="M8,54 L16,54 C19,54 21,10 26,10 C31,10 34,47 44,52 C58,55 90,54 122,54 Z" fill="url(#sxgFast)"/><path class="ln" pathLength="100" d="M8,54 L16,54 C19,54 21,10 26,10 C31,10 34,47 44,52 C58,55 90,54 122,54" fill="none" stroke="#6E0147" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="sx-fmt-tag">Fast</span><h3>Fast-release</h3><p>Most of the dose is released within the first ten minutes, while the meal is still being digested, then it tails off.</p><div class="sx-chips"><span>Vitamin A</span><span>Vitamin D</span><span>Vitamin E</span><span>Vitamin K</span></div></article>
+  <article class="sx-fmt" data-rv><div class="sx-cv-wrap sx-curve" data-rv><svg class="sx-cv" viewBox="0 0 130 62" preserveAspectRatio="none" aria-hidden="true"><line x1="8" y1="54" x2="124" y2="54" stroke="#e6d6e1" stroke-width="1"/><path d="M8,54 C30,54 40,53 54,44 C68,35 76,32 86,33 C100,36 112,50 122,54 Z" fill="url(#sxgSlow)"/><path class="ln" pathLength="100" d="M8,54 C30,54 40,53 54,44 C68,35 76,32 86,33 C100,36 112,50 122,54" fill="none" stroke="#C9960C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="sx-fmt-tag">Slow</span><h3>Slow-release</h3><p>Releases gradually, peaking a few hours after intake and staying available for up to seven.</p><div class="sx-chips"><span>Vitamin C</span><span>B vitamins</span></div><a class="sx-fmt-link" href="#study">See the vitamin&nbsp;C release study &darr;</a></article>
 </div></section>
 
 <section class="sx-sec" id="study"><div class="sx-study">
@@ -1335,29 +1334,26 @@ table.sx-cmp .sx-col{background:var(--surface)}
     <h2>We tested the release, we did not assume it</h2>
     <p>Our laboratory measured how vitamin C leaves each Microtransporter format, then combined the results with established models of how the gut moves nutrients along.</p>
     <ul class="sx-find">
-      <li><span class="sx-yes" title="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Fast-release delivers around 70 percent of its payload within ten minutes.</span></li>
-      <li><span class="sx-yes" title="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Slow-release reaches full release near three hours, and stays available for about seven.</span></li>
-      <li><span class="sx-yes" title="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>A 50:50 mix gives continuous availability, closely matching a slowly digested meal.</span></li>
+      <li><span class="sx-yes" title="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Fast-release peaks within the first 10 to 15 minutes, then drops away quickly.</span></li>
+      <li><span class="sx-yes" title="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Slow-release peaks around three to four hours and stays available for up to seven.</span></li>
     </ul>
   </div>
-  <div class="sx-curve" data-rv><svg class="sx-chart" viewBox="0 0 540 312" role="img" aria-label="Release study chart: percentage of vitamin C released over seven hours for fast-release, slow-release and the 50:50 mix">
+  <div class="sx-curve" data-rv><svg class="sx-chart" viewBox="0 0 540 312" role="img" aria-label="Release study chart: percentage of vitamin C released per 10-minute interval over seven hours, for fast-release and slow-release Microtransporters. Fast-release peaks early then falls to zero; slow-release peaks several hours later.">
   <g stroke="#ead9e4" stroke-width="1">
-    <line x1="60" y1="30" x2="60" y2="250"/><line x1="60" y1="250" x2="500" y2="250"/>
-    <line x1="60" y1="195" x2="500" y2="195" stroke="#f0e5ec"/><line x1="60" y1="140" x2="500" y2="140" stroke="#f0e5ec"/><line x1="60" y1="85" x2="500" y2="85" stroke="#f0e5ec"/><line x1="60" y1="30" x2="500" y2="30" stroke="#f0e5ec"/>
+    <line x1="60" y1="40" x2="60" y2="250"/><line x1="60" y1="250" x2="500" y2="250"/>
+    <line x1="60" y1="180" x2="500" y2="180" stroke="#f0e5ec"/><line x1="60" y1="110" x2="500" y2="110" stroke="#f0e5ec"/><line x1="60" y1="40" x2="500" y2="40" stroke="#f0e5ec"/>
   </g>
-  <g fill="#8a7682" font-size="12" font-weight="600" text-anchor="end"><text x="50" y="254">0</text><text x="50" y="199">25</text><text x="50" y="144">50</text><text x="50" y="89">75</text><text x="50" y="34">100</text></g>
-  <g fill="#8a7682" font-size="12" font-weight="600" text-anchor="middle"><text x="60" y="270">0</text><text x="121" y="270">1</text><text x="244" y="270">3</text><text x="367" y="270">5</text><text x="490" y="270">7</text></g>
+  <g fill="#8a7682" font-size="12" font-weight="600" text-anchor="end"><text x="50" y="254">0%</text><text x="50" y="184">10%</text><text x="50" y="114">20%</text><text x="50" y="44">30%</text></g>
+  <g fill="#8a7682" font-size="12" font-weight="600" text-anchor="middle"><text x="60" y="270">0</text><text x="121" y="270">1</text><text x="183" y="270">2</text><text x="244" y="270">3</text><text x="306" y="270">4</text><text x="367" y="270">5</text><text x="429" y="270">6</text><text x="490" y="270">7</text></g>
   <text x="280" y="298" fill="#6a5563" font-size="12.5" font-weight="700" text-anchor="middle">Hours after intake</text>
-  <text x="20" y="140" fill="#6a5563" font-size="12.5" font-weight="700" text-anchor="middle" transform="rotate(-90 20 140)">% released</text>
-  <path class="ln" pathLength="100" d="M60,250 C64,180 66,112 70,96 C96,72 110,60 121,56 C162,49 210,45 244,43 C330,40 420,38 490,37" fill="none" stroke="#6E0147" stroke-width="3.4" stroke-linecap="round"/>
-  <path class="ln" pathLength="100" d="M60,250 C86,235 100,210 121,188 C162,155 210,130 244,114 C290,96 330,84 367,74 C410,64 452,57 490,52" fill="none" stroke="#C9960C" stroke-width="3.4" stroke-linecap="round"/>
-  <path class="ln" pathLength="100" d="M60,250 C70,220 80,190 91,166 C120,140 155,122 183,109 C230,90 270,82 306,74 C370,62 440,52 490,45" fill="none" stroke="#34061f" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="2 6"/>
-  <circle cx="70" cy="96" r="4.5" fill="#6E0147"/><text x="80" y="92" fill="#6E0147" font-size="11.5" font-weight="800">70% in 10 min</text>
+  <text x="18" y="145" fill="#6a5563" font-size="12.5" font-weight="700" text-anchor="middle" transform="rotate(-90 18 145)">% released per 10 min</text>
+  <path class="ln" pathLength="100" d="M60,250 L80,250 L91,61 L111,152 L132,203 L152,226 L183,234 L214,237 L244,233 L275,247 L306,250 L490,250" fill="none" stroke="#6E0147" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path class="ln" pathLength="100" d="M60,250 L91,250 L121,247 L152,240 L183,230 L214,223 L244,215 L275,209 L306,207 L336,212 L367,222 L398,233 L429,242 L459,246 L490,249" fill="none" stroke="#C9960C" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="91" cy="61" r="4.5" fill="#6E0147"/><text x="100" y="58" fill="#6E0147" font-size="11.5" font-weight="800">Peak at ~30&nbsp;min</text>
   <g font-size="12" font-weight="700">
-    <rect x="300" y="40" width="190" height="74" rx="10" fill="#ffffff" stroke="#ead9e4"/>
-    <line x1="314" y1="58" x2="338" y2="58" stroke="#6E0147" stroke-width="3.4" stroke-linecap="round"/><text x="346" y="62" fill="#3a2a34">Fast-release</text>
-    <line x1="314" y1="78" x2="338" y2="78" stroke="#C9960C" stroke-width="3.4" stroke-linecap="round"/><text x="346" y="82" fill="#3a2a34">Slow-release</text>
-    <line x1="314" y1="98" x2="338" y2="98" stroke="#34061f" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="2 5"/><text x="346" y="102" fill="#3a2a34">50:50 mix</text>
+    <rect x="314" y="46" width="178" height="56" rx="10" fill="#ffffff" stroke="#ead9e4"/>
+    <line x1="328" y1="66" x2="352" y2="66" stroke="#6E0147" stroke-width="3.2" stroke-linecap="round"/><text x="360" y="70" fill="#3a2a34">Fast-release</text>
+    <line x1="328" y1="86" x2="352" y2="86" stroke="#C9960C" stroke-width="3.2" stroke-linecap="round"/><text x="360" y="90" fill="#3a2a34">Slow-release</text>
   </g>
 </svg></div>
 </div></section>
