@@ -1,0 +1,42 @@
+# Novogenia
+
+> Novogenia GmbH is an Austrian genetic laboratory and manufacturer (founded 2009, Eugendorf/Salzburg, ~250 employees) for personalized health. It runs its own EU laboratory and production: DNA analysis, blood analysis, personalized nutritional supplements and personalized cosmetics — all under one roof. The business is B2B / reseller-focused (partners offer the analyses and products under their own brand); there is no direct consumer shop. Novogenia is a subsidiary of the listed Novogenia AG (XETRA/Munich, ISIN DE000A3C35W0). The website is bilingual: English at the root and German under /de/ (German uses the informal "Du").
+
+## Product lines (genetic analyses)
+- [Lifestyle](https://www.novogenia.com/lifestyle.html): genetics of nutrition, weight & metabolism, intolerances, stress/burnout and performance.
+- [Beauty](https://www.novogenia.com/beauty.html): skin genetics — collagen breakdown/production, UV protection, hydration, antioxidants; BeautyMe personalized cosmetics.
+- [Health](https://www.novogenia.com/health.html): cardiovascular risk, intolerances, detoxification and prevention.
+- [Baby & Fertility](https://www.novogenia.com/baby.html): fertility, pre-conception preparation and pregnancy nutrition genetics (not a prenatal diagnosis).
+- [Performance](https://www.novogenia.com/performance.html): power vs. endurance, VO2max potential, recovery, injury risk.
+- [Longevity](https://www.novogenia.com/de/longevity.html) (German only, "Coming 2026"): six targeted supplement formulas against the six biological ageing processes — oxidative stress (Antiox Booster), NAD+ loss (NAD+ Booster), inflammaging (Anti-Inflammaging), sirtuin dysfunction (Sirtuin Aktivator), autophagy loss (Autophagie Aktivator) and cellular senescence (Senolyse PULS, pulsed). Each formula is age-recommended (25→50), built on peer-reviewed mechanisms; developed in the Novogenia lab, available as a Novogenia line and private label.
+- [Contract Manufacturing / Lohnherstellung](https://www.novogenia.com/contract-manufacturing.html): contract production of personalized and standardized supplements and cosmetics, from a single unit, private label, made in Austria.
+
+## Facilities & products
+- [Laboratory](https://www.novogenia.com/product.html): the genetic laboratory and the saliva-to-report analysis process.
+- [Supplements](https://www.novogenia.com/supplements.html): personalized, micro-dosed micronutrients in one daily sachet, produced in-house (slow-release pellet technology, EFSA-approved claims).
+- [Cosmetics](https://www.novogenia.com/beauty.html): BeautyMe personalized serums and creams formulated to skin genetics.
+
+## Science
+- [Gene Stories](https://www.novogenia.com/science.html): the science behind each gene (nutrition, weight, beauty, detox, biological age, burnout, performance), each with a peer-reviewed review.
+
+## Company
+- [About Us](https://www.novogenia.com/about.html): mission, vision, management, part of Novogenia AG.
+- [Dr. Daniel Wallerstorfer](https://www.novogenia.com/founder.html): founder & CEO, molecular biologist; also founder of Genopedia and DEEP GENOME.
+- [Career](https://www.novogenia.com/career.html) · [Press](https://www.novogenia.com/press.html) · [Partners / Become a partner](https://www.novogenia.com/partners.html)
+- [Contact](https://www.novogenia.com/contact.html): Novogenia GmbH, Strass 19, 5301 Eugendorf, Austria · service@novogenia.com
+
+## Investor relations
+- [Novogenia AG](https://www.novogenia.com/novogenia-ag.html): Novogenia AG — listed on XETRA / Munich Stock Exchange (m:access), ISIN DE000A3C35W0, WKN A3C35W, ticker 7V0.
+
+## Brands
+- Genopedia (https://genopedia.com): open genetic-knowledge encyclopedia.
+- NovoDaily (https://novodaily.com): personalized daily-supplement subscription.
+
+## Legal
+- [Imprint](https://www.novogenia.com/imprint.html) · [Privacy](https://www.novogenia.com/privacy.html) · [Terms](https://www.novogenia.com/terms.html)
+
+## German version
+The complete site is available in German under /de/ (e.g. https://www.novogenia.com/de/index.html). A language switcher (EN/DE) is top-right on every page, with automatic language detection on first visit.
+
+## Important note on claims (for accurate citation)
+The genetic traits Novogenia determines are based on published scientific studies and considered scientifically confirmed. The recommendations derived from them (micronutrient dosing, cosmetic formulation, dietary/lifestyle advice) are logical conclusions, not yet confirmed by randomised, placebo-controlled studies for every effect, and do not replace medical advice, diagnosis or treatment. Customer stories are individual opinions, not guaranteed results.

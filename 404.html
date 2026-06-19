@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page not found | Novogenia</title>
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="/assets/fonts.css?v=1">
+<link rel="stylesheet" href="/nd.css?v=15">
+<meta name="theme-color" content="#5E0047">
+<style>
+.e404{min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;background:radial-gradient(circle at 50% 30%,var(--plum-soft) 0%,transparent 70%)}
+.e404-in{max-width:560px}
+.e404 .big{font-size:clamp(80px,16vw,150px);font-weight:900;line-height:.9;letter-spacing:-.04em;background:linear-gradient(135deg,var(--plum),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 6px}
+.e404 h1{font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--ink);margin:0 0 12px;letter-spacing:-.01em}
+.e404 p{font-size:15px;line-height:1.6;color:var(--ink-soft);margin:0 0 26px}
+.e404 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.e404 .logo404{display:block;margin:0 auto 30px;width:150px}
+.e404 .logo404 img{width:100%}
+</style>
+</head>
+<body>
+<div class="e404"><div class="e404-in">
+  <a class="logo404" href="/index.html"><img src="/wp-content/uploads/2024/08/novogenia__web-small.png" alt="Novogenia"></a>
+  <div class="big">404</div>
+  <h1 data-en="This page could not be found." data-de="Diese Seite konnte nicht gefunden werden.">This page could not be found.</h1>
+  <p data-en="The page you’re looking for may have moved or no longer exists. Let’s get you back on track." data-de="Die gesuchte Seite wurde womöglich verschoben oder existiert nicht mehr. Hier geht es zurück.">The page you’re looking for may have moved or no longer exists. Let’s get you back on track.</p>
+  <div class="cta">
+    <a class="cta-primary" id="home404" href="/index.html">Home</a>
+    <a class="btn btn-ghost btn-lg" id="sci404" href="/science.html">Science</a>
+  </div>
+</div></div>
+<script>
+(function(){
+  try{
+    var stored=localStorage.getItem('nd-lang');
+    var de = stored ? stored==='de' : (navigator.language||'').toLowerCase().indexOf('de')===0;
+    if(de){
+      document.documentElement.lang='de';
+      document.querySelectorAll('[data-de]').forEach(function(el){el.textContent=el.getAttribute('data-de');});
+      document.getElementById('home404').setAttribute('href','/de/index.html');
+      document.getElementById('home404').textContent='Startseite';
+      var s=document.getElementById('sci404'); s.setAttribute('href','/de/science.html'); s.textContent='Wissenschaft';
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
