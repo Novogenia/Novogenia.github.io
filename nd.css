@@ -915,7 +915,8 @@ footer.foot p{font-size:12.5px;color:rgba(255,255,255,.5)}
 /* Brand green (2026-06): --gold is now the bright Novogenia green (#DDDD12) for badges, fills,
    icon backgrounds and dark-background accents (hero, podcast). Text/gradient accents that sit on
    LIGHT backgrounds use the dark olive --green (#6E6E0F) so they stay legible. */
-.accent,.hero h1 span.grad,.sp-text h2 .accent,.spotlight.cream .sp-text h2 .accent,.reseller h2 .accent,.tm-text h3 .accent,.grow h2 .accent,.invest h2 .accent{background:linear-gradient(90deg,var(--plum),var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.accent,.hero h1 span.grad,.spotlight.cream .sp-text h2 .accent,.tm-text h3 .accent{background:linear-gradient(90deg,var(--plum),var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.reseller .accent,.grow .accent,.invest .accent,.spotlight.dark .sp-text h2 .accent,.aibot .accent,.seo-final .accent{background:linear-gradient(90deg,#fff,var(--ng-green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .sp-eyebrow,.press-card .d,.algo-row .need,.aging-ic{color:var(--green)}
 
 /* Novogenia AI assistant advert band (home) */
