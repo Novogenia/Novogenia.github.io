@@ -923,7 +923,7 @@ footer.foot p{font-size:12.5px;color:rgba(255,255,255,.5)}
 .aibot::before{content:"";position:absolute;top:-120px;right:-100px;width:420px;height:420px;background:radial-gradient(circle,rgba(221,221,18,.16),transparent 65%);border-radius:50%}
 .aibot-wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:64px var(--gutter);display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
 .aibot-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.aibot h2{font-size:clamp(26px,3.2vw,42px);font-weight:900;line-height:1.07;letter-spacing:-.01em;margin:0 0 16px}
+.aibot h2{color:#fff;font-size:clamp(26px,3.2vw,42px);font-weight:900;line-height:1.07;letter-spacing:-.01em;margin:0 0 16px}
 .aibot h2 .g{color:var(--gold)}
 .aibot .lead{font-size:16px;line-height:1.62;color:rgba(255,255,255,.86);margin:0 0 24px;max-width:520px}
 .aibot-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#1c1c00;font-family:inherit;font-weight:800;font-size:15.5px;padding:15px 28px;border-radius:var(--radius-pill);border:0;cursor:pointer;box-shadow:0 12px 30px rgba(221,221,18,.28);transition:transform .15s,box-shadow .15s}
