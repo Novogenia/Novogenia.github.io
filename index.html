@@ -6,8 +6,8 @@
 <title>Novogenia — Unlock Your Genes for Precision Health</title>
 <meta name="description" content="Novogenia is an Austrian genetic laboratory. From a single saliva sample to finished, personalized products — DNA analysis for health, nutrition, beauty, performance and more. ISO-certified, EU laboratory, since 2009.">
 <link rel="stylesheet" href="/assets/fonts.css?v=1">
-<link rel="stylesheet" href="nd.css?v=16">
-<link rel="stylesheet" href="ir.css?v=16">
+<link rel="stylesheet" href="nd.css?v=17">
+<link rel="stylesheet" href="ir.css?v=17">
 <link rel="canonical" href="https://www.novogenia.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#5E0047">
@@ -138,6 +138,23 @@
     </a>
   </div>
   <p class="trio-note">Three specialties, one company — which is exactly why your sample never has to leave the building, let alone the EU.</p>
+</section>
+
+
+<!-- NOVOGENIA AI ASSISTANT -->
+<section class="aibot">
+  <div class="aibot-wrap">
+    <div class="aibot-text">
+      <div class="aibot-eyebrow">✨ Novogenia AI assistant</div>
+      <h2>Your questions — <span class="g">answered instantly.</span></h2>
+      <p class="lead">Our AI assistant helps partners and prospects around the clock — from products and training to private-label manufacturing, legal questions and special projects. Just ask, in your language.</p>
+      <button type="button" class="aibot-btn" onclick="var f=document.querySelector('.ndc-fab');f?f.click():window.open('https://novogenia-support-bot.live.chatbot.twoxten.at/chat','_blank','noopener')">💬 Chat with the AI bot</button>
+      <div class="aibot-hint"><span class="ar">↘</span> You can reach it any time via the chat icon at the bottom right.</div>
+    </div>
+    <div class="aibot-grid">
+      <div class="aibot-chip"><span class="ic">🧪</span>Questions about the products</div><div class="aibot-chip"><span class="ic">🏢</span>About the company</div><div class="aibot-chip"><span class="ic">🤝</span>Becoming a Novogenia partner</div><div class="aibot-chip"><span class="ic">🎯</span>Sales training</div><div class="aibot-chip"><span class="ic">🎓</span>Training & certification</div><div class="aibot-chip"><span class="ic">🧭</span>NovoPilot platform</div><div class="aibot-chip"><span class="ic">📣</span>Marketing materials</div><div class="aibot-chip"><span class="ic">👥</span>Referring a reseller</div><div class="aibot-chip"><span class="ic">⚖️</span>Legal & compliance</div><div class="aibot-chip"><span class="ic">🧫</span>Your own private-label supplement</div><div class="aibot-chip"><span class="ic">🏗️</span>Large & special projects</div>
+    </div>
+  </div>
 </section>
 
 <!-- GENETIC ANALYSES (coloured worlds) -->
@@ -542,6 +559,6 @@
   const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
-  <script src="nd-nav.js?v=16" defer></script>
+  <script src="nd-nav.js?v=17" defer></script>
 </body>
 </html>
