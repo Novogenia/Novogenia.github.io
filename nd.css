@@ -8,8 +8,8 @@
   --plum-deep: rgb(64, 0, 49);
   --plum-soft: rgba(94, 0, 71, 0.06);
   --plum-soft-2: rgba(94, 0, 71, 0.12);
-  --gold: #E8B23A;
-  --gold-soft: rgba(232, 178, 58, 0.16);
+  --gold: #DDDD12;
+  --gold-soft: rgba(221, 221, 18, 0.16);
   --ng-green: #DDDD12;
   --green: #6E6E0F;
   --ink: #1A1418;
@@ -911,3 +911,9 @@ footer.foot p{font-size:12.5px;color:rgba(255,255,255,.5)}
 @media(max-width:480px){
   .ndc-launcher{right:16px;bottom:16px}
 }
+
+/* Brand green (2026-06): --gold is now the bright Novogenia green (#DDDD12) for badges, fills,
+   icon backgrounds and dark-background accents (hero, podcast). Text/gradient accents that sit on
+   LIGHT backgrounds use the dark olive --green (#6E6E0F) so they stay legible. */
+.accent,.hero h1 span.grad,.sp-text h2 .accent,.spotlight.cream .sp-text h2 .accent,.reseller h2 .accent,.tm-text h3 .accent,.grow h2 .accent,.invest h2 .accent{background:linear-gradient(90deg,var(--plum),var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sp-eyebrow,.press-card .d,.algo-row .need,.aging-ic{color:var(--green)}
