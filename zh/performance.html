@@ -149,7 +149,7 @@
   </div>
 </footer>
 
-<script src="/assets/stories-data.js"></script>
+<script src="/assets/stories-data-zh.js"></script>
 <script>
 var S = window.NOVO_STORIES || [];
 var CATS = ['Performance','Sport'];
@@ -157,7 +157,7 @@ var st = S.filter(function(s){ return CATS.indexOf(s.category)>-1; });
 document.getElementById('aboxes').innerHTML = st.map(function(s){
   return '<div class="abox"><span class="g">'+s.gene+'</span><div><b>'+s.geneEffect+'</b><span>'+s.geneName+'</span></div></div>';
 }).join('');
-var html = '<div class="sec-head"><span class="sec-tag">Performance &amp; Sport</span><h2>Real stories, <span class="accent">written in real genes.</span></h2></div>';
+var html = '<div class="sec-head"><span class="sec-tag">运动表现与体育</span><h2>真实的故事，<span class="accent">书写在真实的基因之中。</span></h2></div>';
 html += st.map(function(s,i){
   var rev=i%2===1?' rev':''; var alt=i%2===1?' alt':'';
   return '<section class="tm'+rev+alt+'"><div class="tm-in">'
@@ -166,8 +166,8 @@ html += st.map(function(s,i){
     +'</div></section>';
 }).join('');
 html += '<div class="spotlight-wrap"><section class="spotlight dark"><div class="spotlight-grid">'
-  +'<div class="sp-img"><img src="/assets/report-performance.jpg" alt="Performance report"></div>'
-  +'<div class="sp-text"><div class="sp-eyebrow">★ Performance report</div><h2>Every story here is a <span class="accent">chapter of your Performance report.</span></h2><p>Power vs. endurance, VO₂max potential, recovery, hormones and injury risk — all in one personalized report, colour-coded to your own genotype with the science behind each result.</p><a class="sp-btn" href="partners.html">Become a partner →</a></div>'
+  +'<div class="sp-img"><img src="/assets/report-performance.jpg" alt="运动表现报告"></div>'
+  +'<div class="sp-text"><div class="sp-eyebrow">★ 运动表现报告</div><h2>这里的每一个故事，都是<span class="accent">您运动表现报告中的一个篇章。</span></h2><p>力量与耐力、VO₂max 潜能、恢复能力、激素水平以及受伤风险——尽在一份个性化报告之中，依据您自身的基因型进行颜色标注，并附上每项结果背后的科学依据。</p><a class="sp-btn" href="partners.html">成为合作伙伴 →</a></div>'
   +'</div></section></div>';
 document.getElementById('clusters').innerHTML = html;
 </script>

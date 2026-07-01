@@ -353,31 +353,31 @@
        'https://media.novogenia.com/podcast/'). Files keep the same names. */
     var PBASE='assets/podcast/';
     var EP=[
-      [1,'How It All Started','01_how_it_all_started'],
-      [2,'The Angelina Effect','02_angelina_effect'],
-      [3,'The Celtic Curse','03_celtic_curse'],
-      [4,'The Blood Clot','04_blood_clot'],
-      [5,'The Berlin Patient','05_berlin_patient'],
-      [6,'Pharmacogenetics','06_pharmacogenetics'],
-      [7,'The Story of Lactose','07_lactose_story'],
-      [8,'The Story of Gluten','08_gluten'],
-      [9,'The Gene Diet','09_gene_diet'],
-      [10,'The Fire Brigade','10_fire_brigade'],
-      [11,'The Scourge of the Seas','11_scourge_of_the_seas'],
-      [12,'The Food Mystery','12_food_mystery'],
-      [13,'The Lipid Legacy','13_lipid_legacy'],
-      [14,'A Happy Century','14_happy_century'],
-      [15,'The Asian Glow','15_asian_glow'],
-      [16,'Born To Be Great','16_born_to_be_great'],
-      [17,'The Man With Two Faces','17_man_with_two_faces'],
-      [18,'The Genetic Memory','18_genetic_memory'],
-      [19,'Into The Blood','19_into_the_blood'],
-      [20,'Escape Velocity','20_escape_velocity'],
-      [21,'Instructions From Nature','21_instructions_from_nature']
+      [1,'一切的起点','01_how_it_all_started'],
+      [2,'安吉丽娜效应','02_angelina_effect'],
+      [3,'凯尔特人的诅咒','03_celtic_curse'],
+      [4,'血栓之谜','04_blood_clot'],
+      [5,'柏林病人','05_berlin_patient'],
+      [6,'药物基因组学','06_pharmacogenetics'],
+      [7,'乳糖的故事','07_lactose_story'],
+      [8,'麸质的故事','08_gluten'],
+      [9,'基因饮食','09_gene_diet'],
+      [10,'消防队','10_fire_brigade'],
+      [11,'海上的祸患','11_scourge_of_the_seas'],
+      [12,'食物之谜','12_food_mystery'],
+      [13,'血脂的遗传','13_lipid_legacy'],
+      [14,'幸福百年','14_happy_century'],
+      [15,'亚洲红脸','15_asian_glow'],
+      [16,'天生卓越','16_born_to_be_great'],
+      [17,'双面人','17_man_with_two_faces'],
+      [18,'基因的记忆','18_genetic_memory'],
+      [19,'深入血液','19_into_the_blood'],
+      [20,'逃逸速度','20_escape_velocity'],
+      [21,'来自自然的指令','21_instructions_from_nature']
     ];
     document.getElementById('podGrid').innerHTML = EP.map(function(e){
       var n=('0'+e[0]).slice(-2);
-      return '<div class="pod-card"><div class="pod-top"><div class="pod-cover">'+n+'</div><div class="pod-meta"><div class="ep">Episode '+n+'</div><b>'+e[1]+'</b></div></div><audio controls preload="none" src="'+PBASE+e[2]+'.m4a"></audio></div>';
+      return '<div class="pod-card"><div class="pod-top"><div class="pod-cover">'+n+'</div><div class="pod-meta"><div class="ep">第 '+n+' 集</div><b>'+e[1]+'</b></div></div><audio controls preload="none" src="'+PBASE+e[2]+'.m4a"></audio></div>';
     }).join('');
   })();
   </script>
